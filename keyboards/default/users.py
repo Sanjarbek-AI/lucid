@@ -19,7 +19,7 @@ async def users_main_menu():
                 KeyboardButton(text=_("Ma'lumot ℹ"))
             ],
             [
-                KeyboardButton(text=_("Sozlamalar ⚙")),
+                KeyboardButton(text=_("Tilni sozlash ⚙")),
             ]
         ], resize_keyboard=True
     )

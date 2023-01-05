@@ -423,3 +423,16 @@ async def add_advantage(message, state):
     except Exception as exc:
         print(exc)
         return False
+
+
+async def update_language(new_lang, telegram_id, message):
+    try:
+        query = users.update().values(
+            language=new_lang,
+            updated_at=message.date
+        ).where(users.c.status == UserStatus.active, users.c.telegram_id == telegram_id)
+        await database.execute(query=query)
+        return True
+    except Exception as exc:
+        print(exc)
+        return False

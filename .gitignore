@@ -128,3 +128,5 @@ dmypy.json
 .pyre/
 .idea/*
 .env
+registered_users.xlsx
+users.xlsx

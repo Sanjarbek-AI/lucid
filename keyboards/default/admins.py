@@ -22,6 +22,9 @@ async def admin_main_menu():
                 KeyboardButton(text=_("Statistika 📈")),
                 KeyboardButton(text=_("Post Jo'natish ⏫"))
             ],
+            [
+                KeyboardButton(text=_("Tilni sozlash ⚙")),
+            ]
         ], resize_keyboard=True
     )
     return admin_menu
@@ -58,3 +61,17 @@ async def contact_def():
         ], resize_keyboard=True
     )
     return contact
+
+
+async def languages_keyboard():
+    languages = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="O'zbek 🇺🇿"),
+                KeyboardButton(text="Pусский 🇷🇺"),
+                KeyboardButton(text="English 🇺🇸")
+            ]
+        ],
+        resize_keyboard=True
+    )
+    return languages

@@ -35,7 +35,7 @@ async def image_or_file():
                 InlineKeyboardButton(text=_("Video"), callback_data="send_post_file"),
             ],
             [
-                InlineKeyboardButton(text=_("Hech narsa"), callback_data="nothing")
+                InlineKeyboardButton(text=_("Shunchaki matn"), callback_data="nothing")
             ]
         ]
     )
@@ -48,6 +48,19 @@ async def text_or_not():
             [
                 InlineKeyboardButton(text=_("Ha"), callback_data="send_post_text_yes"),
                 InlineKeyboardButton(text=_("Yo'q"), callback_data="send_post_text_no"),
+            ]
+        ]
+    )
+    return send_post
+
+
+
+async def link_or_not():
+    send_post = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=_("Ha"), callback_data="add_link_yes"),
+                InlineKeyboardButton(text=_("Yo'q"), callback_data="add_link_no"),
             ]
         ]
     )
@@ -302,3 +315,14 @@ async def add_advantage_def():
         ]
     )
     return add_advantage
+
+
+async def export_excel_users():
+    users_excel = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=_("Excel olish (ro'yxatdan o'tganlar)"), callback_data="registered_users"),
+            ]
+        ]
+    )
+    return users_excel

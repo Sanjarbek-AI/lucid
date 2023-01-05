@@ -1,3 +1,4 @@
+from . import bot_settings
 from . import advantage
 from . import about
 from . import contact

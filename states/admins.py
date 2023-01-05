@@ -29,9 +29,11 @@ class SendPost(StatesGroup):
     image_or_file = State()
     image = State()
     file = State()
+    caption = State()
     text = State()
     text_wait = State()
     link = State()
+    link_yes_or_no = State()
     button_text = State()
     waiting = State()
 

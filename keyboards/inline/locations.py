@@ -40,3 +40,14 @@ async def locations_def():
         ]
     )
     return locations
+
+
+languages_inline = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="O'zbek 🇺🇿", callback_data="uz"),
+            InlineKeyboardButton(text="Pусский 🇷🇺", callback_data="ru"),
+            InlineKeyboardButton(text="English 🇺🇸", callback_data="en"),
+        ]
+    ]
+)
