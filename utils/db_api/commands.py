@@ -104,12 +104,12 @@ async def update_user_status(message, state):
         return False
 
 
-async def register_start(message):
+async def register_start(message, lang):
     try:
         query = users.insert().values(
             telegram_id=message.from_user.id,
             full_name=message.from_user.full_name,
-            language="uz",
+            language=lang,
             status=UserStatus.inactive,
             created_at=message.date,
             updated_at=message.date

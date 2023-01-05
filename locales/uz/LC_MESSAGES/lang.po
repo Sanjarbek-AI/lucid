@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-31 09:19+0500\n"
+"POT-Creation-Date: 2023-01-05 14:30+0500\n"
 "PO-Revision-Date: 2022-12-31 09:21+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uz\n"
@@ -18,360 +18,156 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
+#: handlers/users/about.py:27 handlers/users/advantage.py:26
+#: handlers/users/contact.py:26 handlers/users/results.py:30
+msgid "Ma'lumot mavjud emas, qo'shish uchun pastdagi tugmadan foydalaning."
+msgstr ""
+
+#: handlers/users/about.py:33 handlers/users/advantage.py:32
+#: handlers/users/contact.py:32
+msgid "Iltimos, o'zbek tili uchun rasmni kiriting."
+msgstr ""
+
+#: handlers/users/about.py:44 handlers/users/advantage.py:43
+#: handlers/users/contact.py:43
+msgid "Iltimos, rus tili uchun rasmni kiriting."
+msgstr ""
+
+#: handlers/users/about.py:55 handlers/users/advantage.py:54
+#: handlers/users/contact.py:54
+msgid "Iltimos, ingliz tili uchun rasmni kiriting."
+msgstr ""
+
+#: handlers/users/about.py:66 handlers/users/advantage.py:65
+#: handlers/users/contact.py:65
+msgid "Iltimos, o'zbek tili uchun matnli ma'lumotni kiriting."
+msgstr ""
+
+#: handlers/users/about.py:77 handlers/users/advantage.py:76
+#: handlers/users/contact.py:76
+msgid "Iltimos, rus tili uchun matnli ma'lumotni kiriting."
+msgstr ""
+
+#: handlers/users/about.py:88 handlers/users/advantage.py:87
+#: handlers/users/contact.py:87
+msgid "Iltimos, ingliz tili uchun matnli ma'lumotni kiriting"
+msgstr ""
+
+#: handlers/users/about.py:100 handlers/users/advantage.py:99
+#: handlers/users/contact.py:99 handlers/users/results.py:125
+msgid "Ma'lumot muvofaqqiyatli qo'shildi. ✅"
+msgstr ""
+
+#: handlers/users/about.py:102 handlers/users/advantage.py:101
+#: handlers/users/contact.py:101 handlers/users/results.py:127
+#: handlers/users/teachers.py:127
+msgid "Ma'lumot qo'shilmadi. Botda muommo mavjud."
+msgstr ""
+
+#: handlers/users/about.py:124 handlers/users/advantage.py:123
+#: handlers/users/contact.py:123 handlers/users/results.py:40
+#: handlers/users/teachers.py:40
+msgid "Ma'lumot o'chirildi. ✅"
+msgstr ""
+
+#: handlers/users/about.py:126 handlers/users/admin_courses.py:150
+#: handlers/users/admin_courses.py:267 handlers/users/admin_courses.py:294
+#: handlers/users/admin_courses.py:314 handlers/users/advantage.py:125
+#: handlers/users/bot_settings.py:24 handlers/users/bot_settings.py:35
+#: handlers/users/bot_settings.py:46 handlers/users/bot_settings.py:66
+#: handlers/users/bot_settings.py:77 handlers/users/bot_settings.py:88
+#: handlers/users/contact.py:125 handlers/users/results.py:52
+#: handlers/users/results.py:148 handlers/users/results.py:173
+#: handlers/users/results.py:200 handlers/users/results.py:246
+#: handlers/users/results.py:273 handlers/users/teachers.py:52
+#: handlers/users/teachers.py:148 handlers/users/teachers.py:173
+#: handlers/users/teachers.py:200 handlers/users/teachers.py:246
+#: handlers/users/teachers.py:273
+msgid "Botda muommo mavjud."
+msgstr ""
+
+#: handlers/users/about.py:145 handlers/users/advantage.py:144
+#: handlers/users/contact.py:144 handlers/users/results.py:221
+#: handlers/users/teachers.py:221
+msgid "Ma'lumot mavjud emas."
+msgstr ""
+
 #: handlers/users/admin_backs.py:14 handlers/users/admin_backs.py:21
-#: handlers/users/admin_profile.py:32
 msgid "Asosiy menyu."
 msgstr ""
 
-#: handlers/users/admin_comp.py:25
+#: handlers/users/admin_courses.py:32
 msgid ""
-"Hozirda faol konkurslar mavjud emas. Yangi qo'shish uchun pastdagi "
-"tugmadan foydalaning."
-msgstr ""
-
-#: handlers/users/admin_comp.py:31
-msgid "O'zbek tili uchun konkursni rasmini yuboring."
-msgstr ""
-
-#: handlers/users/admin_comp.py:41
-msgid "Rus tili uchun konkursni rasmini yuboring."
-msgstr ""
-
-#: handlers/users/admin_comp.py:51
-msgid "O'zbek tili uchun konkurs shartlarini yuboring."
-msgstr ""
-
-#: handlers/users/admin_comp.py:61
-msgid "Rus tili uchun konkurs shartlarini yuboring."
-msgstr ""
-
-#: handlers/users/admin_comp.py:71
-msgid "O'zbek tili uchun sovg'alarni rasmini jo'nating."
-msgstr ""
-
-#: handlers/users/admin_comp.py:81
-msgid "Rus tili uchun sovg'alarni rasmini jo'nating."
-msgstr ""
-
-#: handlers/users/admin_comp.py:91
-msgid "O'zbek tili uchun sovg'alarni matnini yuboring."
-msgstr ""
-
-#: handlers/users/admin_comp.py:101
-msgid "Rus tili uchun sovg'alarni matnini yuboring."
-msgstr ""
-
-#: handlers/users/admin_comp.py:114
-msgid "Konkursni boshlashni hohlaysizmi ?"
-msgstr ""
-
-#: handlers/users/admin_comp.py:117 handlers/users/admin_comp.py:128
-#: handlers/users/admin_comp.py:172
-msgid "Botda xatolik yuz berdi !!!"
-msgstr ""
-
-#: handlers/users/admin_comp.py:125
-msgid "Konkurs boshlandi."
-msgstr ""
-
-#: handlers/users/admin_comp.py:134
-msgid "Konkurs bekor qilindi."
-msgstr ""
-
-#: handlers/users/admin_comp.py:141
-msgid "Konkursni yakunlashni hohlaysizmi ?"
-msgstr ""
-
-#: handlers/users/admin_comp.py:149
-msgid "Konkurs yakunlandi."
-msgstr ""
-
-#: handlers/users/admin_comp.py:153 handlers/users/admin_comp_update.py:32
-#: handlers/users/admin_comp_update.py:54
-#: handlers/users/admin_comp_update.py:76
-#: handlers/users/admin_comp_update.py:98
-#: handlers/users/admin_comp_update.py:137
-#: handlers/users/admin_comp_update.py:160
-#: handlers/users/admin_comp_update.py:182
-#: handlers/users/admin_comp_update.py:204 handlers/users/admin_contact.py:98
-#: handlers/users/admin_contact.py:125 handlers/users/admin_contact.py:150
-#: handlers/users/admin_contact.py:175 handlers/users/admin_contact.py:200
-#: handlers/users/admin_profile.py:26 handlers/users/admin_profile.py:67
-#: handlers/users/admin_profile.py:99 handlers/users/admin_profile.py:130
-#: handlers/users/admin_profile.py:162 handlers/users/admin_profile.py:182
-#: handlers/users/admin_showroom.py:145 handlers/users/admin_showroom.py:220
-#: handlers/users/admin_showroom.py:264 handlers/users/admin_showroom.py:281
-#: handlers/users/admin_showroom.py:317 handlers/users/admin_showroom.py:334
-#: handlers/users/admin_showroom.py:370 handlers/users/admin_showroom.py:387
-#: handlers/users/admin_showroom.py:417 handlers/users/post_like.py:131
-#: handlers/users/send_post.py:227 handlers/users/start.py:162
-#: handlers/users/user_menu.py:30 handlers/users/user_menu.py:78
-#: handlers/users/user_menu.py:93 handlers/users/user_menu.py:123
-#: handlers/users/user_menu.py:146 handlers/users/user_profile.py:46
-#: handlers/users/user_profile.py:78 handlers/users/user_profile.py:109
-#: handlers/users/user_profile.py:140
-msgid "Botda nosozlik yuz berdi."
-msgstr ""
-
-#: handlers/users/admin_comp.py:161
-msgid "Konkurs to'xtatilmadi."
-msgstr ""
-
-#: handlers/users/admin_comp.py:169
-msgid "Post o'chrildi."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:16
-msgid "O'zbek tili uchun yangi rasmni kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:24
-#: handlers/users/admin_comp_update.py:46
-#: handlers/users/admin_comp_update.py:129
-#: handlers/users/admin_comp_update.py:152 handlers/users/admin_contact.py:115
-#: handlers/users/admin_contact.py:140 handlers/users/admin_contact.py:165
-#: handlers/users/admin_contact.py:190 handlers/users/admin_showroom.py:256
-#: handlers/users/admin_showroom.py:273
-msgid "Rasm yangilandi."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:38
-msgid "Rus tili uchun yangi rasmni kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:60
-msgid "O'zbek tili uchun yangi matnni kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:68
-#: handlers/users/admin_comp_update.py:90
-msgid "Shartlar yangilandi."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:82
-msgid "Rus tili uchun yangi matnni kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:120
-msgid "O'zbek tili uchun sovg'alarning yangi rasmini kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:143
-msgid "Rus tili uchun sovg'alarning yangi rasmini kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:166
-#: handlers/users/admin_comp_update.py:188
-msgid "O'zbek uchun sovg'alarning yangi matnini kiriting."
-msgstr ""
-
-#: handlers/users/admin_comp_update.py:174
-#: handlers/users/admin_comp_update.py:196 handlers/users/admin_showroom.py:309
-#: handlers/users/admin_showroom.py:326
-msgid "Matn yangilandi."
-msgstr ""
-
-#: handlers/users/admin_contact.py:25
-msgid ""
-"Bog'lanish malumotlari mavjud emas. Qo'shish uchun pastdagi tugmadan "
+"Hozirda kurslar mavjud emas, yangi kurs qo'shish uchun pastdagi tugmadan "
 "foydalaning."
 msgstr ""
 
-#: handlers/users/admin_contact.py:51
-msgid "O'zbek tili uchun kontank rasmini kiriting."
+#: handlers/users/admin_courses.py:42
+msgid "Kurs o'chirildi. ✅"
 msgstr ""
 
-#: handlers/users/admin_contact.py:62
-msgid "Rus tili uchun kontank rasmini kiriting."
+#: handlers/users/admin_courses.py:54
+msgid "Did not added. Bot has some problem."
 msgstr ""
 
-#: handlers/users/admin_contact.py:73
-msgid "O'zbek tili uchun kontank matnini kiriting."
+#: handlers/users/admin_courses.py:60
+msgid "Iltimos, o'zbek tili uchun kurs rasmini kiriting."
 msgstr ""
 
-#: handlers/users/admin_contact.py:84
-msgid "Rus tili uchun kontank matnini kiriting."
+#: handlers/users/admin_courses.py:71
+msgid "Iltimos, rus tili uchun kurs rasmini kiriting."
 msgstr ""
 
-#: handlers/users/admin_contact.py:96
-msgid "Kontakt ma'lumotlari qo'shildi."
+#: handlers/users/admin_courses.py:82
+msgid "Iltimos, ingliz tili uchun kurs rasmini kiriting."
 msgstr ""
 
-#: handlers/users/admin_contact.py:106
-msgid "O'zbek tili uchun kontank yangi rasmini kiriting."
+#: handlers/users/admin_courses.py:93
+msgid "Iltimos, o'zbek tili uchun kurs matnini kiriting."
 msgstr ""
 
-#: handlers/users/admin_contact.py:131
-msgid "Rus tili uchun kontank yangi rasmini kiriting."
+#: handlers/users/admin_courses.py:104
+msgid "Iltimos, rus tili uchun kurs matnini kiriting."
 msgstr ""
 
-#: handlers/users/admin_contact.py:156
-msgid "O'zbek tili uchun kontank yangi matnini kiriting."
+#: handlers/users/admin_courses.py:115
+msgid "Iltimos, ingliz tili uchun kurs matnini kiriting."
 msgstr ""
 
-#: handlers/users/admin_contact.py:181
-msgid "Rus tili uchun kontank yangi matnini kiriting."
+#: handlers/users/admin_courses.py:127
+msgid "Kurs muvofaqqiyatli qo'shildi. ✅"
 msgstr ""
 
-#: handlers/users/admin_profile.py:45 handlers/users/user_profile.py:26
-msgid "Yangi tilni tanlang."
+#: handlers/users/admin_courses.py:129
+msgid "Kurs qo'shilmadi. Botda qandaydir muommo mavjud."
 msgstr ""
 
-#: handlers/users/admin_profile.py:58 handlers/users/user_profile.py:37
-msgid "Til yangilangi."
+#: handlers/users/admin_courses.py:176 handlers/users/admin_courses.py:204
+msgid "Bot has some problems."
 msgstr ""
 
-#: handlers/users/admin_profile.py:80
-msgid "Yangi ism familiyani kiriting"
+#: handlers/users/admin_courses.py:242
+msgid "Hozirda faol kurslar mavjud emas."
 msgstr ""
 
-#: handlers/users/admin_profile.py:90
-msgid "Ism familiya yangilangi."
+#: handlers/users/admin_courses.py:303
+msgid "Siz bu kursga ro'yxatdan o'tgansiz. ✅"
 msgstr ""
 
-#: handlers/users/admin_profile.py:112
-msgid "Yangi manzilni tanlang"
-msgstr ""
-
-#: handlers/users/admin_profile.py:143 handlers/users/user_profile.py:122
-msgid "Yangi telefon raqamni kiriting."
-msgstr ""
-
-#: handlers/users/admin_profile.py:155 handlers/users/admin_profile.py:175
-#: handlers/users/user_profile.py:133
-msgid "Telefon raqam yangilandi."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:20 handlers/users/admin_showroom.py:228
-#: handlers/users/admin_showroom.py:424 handlers/users/admin_showroom.py:431
-#: handlers/users/admin_showroom.py:457
-msgid "Shovrumlar menyusi."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:23 handlers/users/admin_showroom.py:460
+#: handlers/users/admin_courses.py:312
 msgid ""
-"Hozirda shovrumlar mavjud emas. Yangi qo'shish uchun pastdagi tugmadan "
-"foydalaning."
+"Siz muvofaqqiyatli ro'yxatdan o'tdingiz. ✅\n"
+"Tez orada siz bilan bog'lanamiz. 😊"
 msgstr ""
 
-#: handlers/users/admin_showroom.py:32 handlers/users/admin_showroom.py:44
-#: handlers/users/admin_showroom.py:56
-msgid "Dillerlar menyusi."
+#: handlers/users/bot_settings.py:14 handlers/users/bot_settings.py:56
+msgid "Iltimos, o'zingizga qulay tilni tanlang 😊"
 msgstr ""
 
-#: handlers/users/admin_showroom.py:35 handlers/users/admin_showroom.py:47
-#: handlers/users/admin_showroom.py:59
-msgid ""
-"Hozirda dillerlar mavjud emas. Yangi qo'shish uchun pastdagi tugmadan "
-"foydalaning."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:65
-msgid "O'zbek tili uchun shovrumning rasmini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:72
-msgid "O'zbek tili uchun dillerning rasmini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:82
-msgid "Rus tili uchun shovrum rasmini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:92
-msgid "O'zbek tili uchun shovrum matnini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:102
-msgid "Rus tili uchun shovrum matnini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:112
-msgid "O'zbek tili uchun shovrum nomini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:122
-msgid "Rus tili uchun shovrum nomini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:132
-msgid "Shovrumning xaritadagi linkini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:143
-msgid "Shovrumning qo'shildi."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:157
-msgid "Rus tili uchun diller rasmini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:167
-msgid "O'zbek tili uchun diller matnini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:177
-msgid "Rus tili uchun diller matnini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:187
-msgid "O'zbek tili uchun diller nomini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:197
-msgid "Rus tili uchun diller nomini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:207
-msgid "Dillerning xaritadagi linkini kiriting."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:218
-msgid "Diller qo'shildi."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:242
-msgid "O'zbek tili uchun shovrumning yangi rasmini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:246
-msgid "Rus tili uchun shovrumning yangi rasmini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:295
-msgid "O'zbek tili uchun shovrumning yangi matnini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:299
-msgid "Rus tili uchun shovrumning yangi matnini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:348
-msgid "O'zbek tili uchun shovrumning yangi nomini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:352
-msgid "Rus tili uchun shovrumning yangi nomini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:362 handlers/users/admin_showroom.py:379
-msgid "Nom yangilandi."
-msgstr ""
-
-#: handlers/users/admin_showroom.py:399
-msgid "Shovrum uchun yangi manzil linkini kiriting"
-msgstr ""
-
-#: handlers/users/admin_showroom.py:409
-msgid "Manzil yangilandi."
-msgstr ""
-
-#: handlers/users/admin_statistics.py:28
-msgid "Faol ko'nkurs yo'q"
-msgstr ""
-
-#: handlers/users/admin_statistics.py:73
-msgid "Aktiv konkurs mavjud emas."
+#: handlers/users/bot_settings.py:21 handlers/users/bot_settings.py:32
+#: handlers/users/bot_settings.py:43 handlers/users/bot_settings.py:63
+#: handlers/users/bot_settings.py:74 handlers/users/bot_settings.py:85
+msgid "Til o'zgartirildi. ✅"
 msgstr ""
 
 #: handlers/users/main.py:10
@@ -383,364 +179,309 @@ msgid ""
 "    "
 msgstr ""
 
-#: handlers/users/post_like.py:37
-msgid "Boshqa ishtorkchilarni ham ko'rish uchun yana tugmasini bosing."
+#: handlers/users/results.py:58
+msgid "Iltimos, o'zbek tili uchun natijaning rasmini kiriting."
 msgstr ""
 
-#: handlers/users/post_like.py:53
-msgid "Boshqa qatnashuvchilar mavjud emas."
+#: handlers/users/results.py:69
+msgid "Iltimos, rus tili uchun natijaning rasmini kiriting."
 msgstr ""
 
-#: handlers/users/post_like.py:61
-msgid "Asosiy menyuga xush kelibsiz."
+#: handlers/users/results.py:80
+msgid "Iltimos, ingliz tili uchun natijaning rasmini kiriting."
 msgstr ""
 
-#: handlers/users/post_like.py:115 handlers/users/start.py:75
-#: handlers/users/start.py:146
-msgid "Siz muvofaqqiyatli ro'yxatdan o'tdingiz."
+#: handlers/users/results.py:91
+msgid "Iltimos, o'zbek tili uchun natijaning matnini kiriting."
+msgstr ""
+
+#: handlers/users/results.py:102
+msgid "Iltimos, rus tili uchun natijaning matnini kiriting."
+msgstr ""
+
+#: handlers/users/results.py:113
+msgid "Iltimos, ingliz tili uchun natijaning matnini kiriting."
 msgstr ""
 
 #: handlers/users/select_language.py:20
 msgid "🤖 Asosiy menyuga xush kelibsiz."
 msgstr ""
 
-#: handlers/users/send_comp_post_user.py:32
-msgid "Siz rasmlarni yuborgansiz. ✅"
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:35
-msgid "Eng yaxshi ishlaringizdan na'muna jo'nating (rasm sifatida)."
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:39
-msgid "Avval kanalga a'zo bo'ling."
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:55
-msgid "Yuborgan rasmdagi ishingizga qisqacha ta'rif bering."
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:82
-msgid ""
-"Konkursda ishtirok etish uchun so'rovingiz qabul qilindi. Iltimos kuting,"
-"  tez orada sizga ovoz (❤) yig'ish uchun Havola yuboriladi."
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:86
-msgid "Botda nosozlik yuz berdi"
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:110
-msgid ""
-"Siz konkurs ishtirokchisiga aylandingiz. \n"
-"Ko'proq like to'plang va g'olib bo'ling. \n"
-"\n"
-msgstr ""
-
-#: handlers/users/send_comp_post_user.py:131
-msgid "Sizning rasmlaringiz qabul qilinmadi."
-msgstr ""
-
-#: handlers/users/send_post.py:29
+#: handlers/users/send_post.py:28
 msgid "Post uchun rasmni kiriting."
 msgstr ""
 
-#: handlers/users/send_post.py:41 handlers/users/send_post.py:60
-#: handlers/users/send_post.py:71
-msgid "Post uchun matn kiritasimi ?"
+#: handlers/users/send_post.py:40
+msgid "Rasm ostiga matn qo'shasizmi ?"
 msgstr ""
 
-#: handlers/users/send_post.py:48
+#: handlers/users/send_post.py:47
+msgid "Iltimos, matnni kiriting."
+msgstr ""
+
+#: handlers/users/send_post.py:54 handlers/users/send_post.py:65
+msgid "Post uchun pastki tugma qo'shishni hohaysizmi ?"
+msgstr ""
+
+#: handlers/users/send_post.py:72
 msgid "Post uchun video kiriting."
 msgstr ""
 
-#: handlers/users/send_post.py:78
+#: handlers/users/send_post.py:84
+msgid "Post uchun matn kiritasimi ?"
+msgstr ""
+
+#: handlers/users/send_post.py:95
 msgid "Post uchun matnni kiriting."
 msgstr ""
 
-#: handlers/users/send_post.py:88 handlers/users/send_post.py:104
-msgid "Post uchun pastki havolani kiriting."
+#: handlers/users/send_post.py:105
+msgid "Post uchun pastki tugma qo'shishni hohaysizmi ?."
 msgstr ""
 
-#: handlers/users/send_post.py:97
-msgid "Post uchun hech narsa kiritilmadi."
+#: handlers/users/send_post.py:142
+msgid "Iltimos, tugma uchun linkni kiriting."
 msgstr ""
 
-#: handlers/users/send_post.py:116
+#: handlers/users/send_post.py:154
 msgid "Post uchun pastki tugmadagi matnni kiriting."
 msgstr ""
 
-#: handlers/users/send_post.py:120
+#: handlers/users/send_post.py:158
 msgid "Havola noto'g'ri kiritildi."
 msgstr ""
 
-#: handlers/users/send_post.py:166
+#: handlers/users/send_post.py:192
+msgid "Jo'natishni hohlaysizmi ?"
+msgstr ""
+
+#: handlers/users/send_post.py:204
 msgid "Habar barcha foydalanuvchilarga yuborilmoqda..."
 msgstr ""
 
-#: handlers/users/send_post.py:222
+#: handlers/users/send_post.py:308
 msgid "Habar barcha foydalanuvchilarga jo'natildi."
 msgstr ""
 
-#: handlers/users/send_post.py:235
+#: handlers/users/send_post.py:313 handlers/users/start.py:94
+msgid "Botda nosozlik yuz berdi."
+msgstr ""
+
+#: handlers/users/send_post.py:321
 msgid "Habar bekor qilindi."
 msgstr ""
 
-#: handlers/users/start.py:26
+#: handlers/users/start.py:21
 msgid "Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. 😊"
 msgstr ""
 
-#: handlers/users/start.py:55
-msgid "Siz elektrik bo'lib ishlaysizmi ?"
+#: handlers/users/start.py:33
+msgid "Bot xizmatiga xush kelibsiz."
 msgstr ""
 
-#: handlers/users/start.py:61
-msgid "Siz ro'yxatdan o'tgansiz."
+#: handlers/users/start.py:48
+msgid "Iltimos, Ism va Familiayangizni kiriting."
 msgstr ""
 
-#: handlers/users/start.py:179
-msgid "Kanalga a'zo bo'lgansiz. ✅"
+#: handlers/users/start.py:59
+msgid "Iltimos, Telefon raqamingizni kiriting."
 msgstr ""
 
-#: handlers/users/start.py:181
-msgid "Вы являетесь участником канала. ✅"
+#: handlers/users/start.py:66
+msgid "Iltimos tugmadan foydalaning."
 msgstr ""
 
-#: handlers/users/start.py:184
-msgid "Kanalga a'zo bo'lmagansiz. ❌"
+#: handlers/users/start.py:76
+msgid "Iltimos, doimiy yashash manzilingizni tanlang."
 msgstr ""
 
-#: handlers/users/start.py:186
-msgid "Вы не являетесь участником канала. ❌"
+#: handlers/users/start.py:91
+msgid "Siz muvofaqqiyatli ro'yxatdan o'tdingiz."
 msgstr ""
 
-#: handlers/users/start.py:191
-msgid "Rasm yuborilgan. ✅"
-msgstr ""
-
-#: handlers/users/start.py:193
-msgid "Картинка отправлена. ✅"
-msgstr ""
-
-#: handlers/users/start.py:196
-msgid "Rasm yuborilmagan. ❌"
-msgstr ""
-
-#: handlers/users/start.py:198
-msgid "Картинка не отправлена. ❌"
-msgstr ""
-
-#: handlers/users/user_menu.py:55 handlers/users/user_menu.py:58
+#: handlers/users/teachers.py:30
 msgid ""
-"Hozirda faol konkurslar mavjud emas. Tez orada yangi konkursimizni "
-"boshlaymiz."
+"Hozirda ustozlar mavjud emas, yangi ustoz qo'shish uchun pastdagi "
+"tugmadan foydalaning."
 msgstr ""
 
-#: handlers/users/user_menu.py:87 handlers/users/user_menu.py:119
-msgid "Bizning rasmiy diller va do'konlarimiz haqida:"
+#: handlers/users/teachers.py:58
+msgid "Iltimos, o'zbek tili uchun ustozning rasmini kiriting."
 msgstr ""
 
-#: handlers/users/user_menu.py:104
-msgid "Список наших официальных дилеров."
+#: handlers/users/teachers.py:69
+msgid "Iltimos, rus tili uchun ustozning rasmini kiriting."
 msgstr ""
 
-#: handlers/users/user_menu.py:106
-msgid "Bizning rasmiy dillerlarimiz ro'yxati."
+#: handlers/users/teachers.py:80
+msgid "Iltimos, ingliz tili uchun ustozning rasmini kiriting."
 msgstr ""
 
-#: handlers/users/user_menu.py:110
-msgid "Hozirda dillerlar mavjud emas."
+#: handlers/users/teachers.py:91
+msgid "Iltimos, o'zbek tili uchun ustoz haqida ma'lumotni kiriting."
 msgstr ""
 
-#: handlers/users/user_profile.py:59
-msgid "Yangi Ism va Familiyani kiriting."
+#: handlers/users/teachers.py:102
+msgid "Iltimos, rus tili uchun ustoz haqida ma'lumotni kiriting."
 msgstr ""
 
-#: handlers/users/user_profile.py:69
-msgid "Ism va Familiya yangilandi."
+#: handlers/users/teachers.py:113
+msgid "Iltimos, ingliz tili uchun ustoz haqida ma'lumotni kiriting."
 msgstr ""
 
-#: handlers/users/user_profile.py:91
-msgid "Yangi manzilni tanlang."
+#: handlers/users/teachers.py:125
+msgid "Ustoz muvofaqqiyatli qo'shildi. ✅"
 msgstr ""
 
-#: keyboards/default/admins.py:11 keyboards/default/users.py:10
-msgid "Konkurs 🎁"
+#: keyboards/default/admins.py:10 keyboards/default/users.py:10
+msgid "Kurslar 🎯"
 msgstr ""
 
-#: keyboards/default/admins.py:12
-msgid "Shovrumlar 🏣"
+#: keyboards/default/admins.py:11 keyboards/default/users.py:11
+msgid "O'qituvchilar 👨‍🏫"
 msgstr ""
 
-#: keyboards/default/admins.py:15 keyboards/default/users.py:14
-msgid "Profil 👤"
+#: keyboards/default/admins.py:14 keyboards/default/users.py:14
+msgid "Natijalar 🎖"
 msgstr ""
 
-#: keyboards/default/admins.py:16
-msgid "Aloqalar ☎"
+#: keyboards/default/admins.py:15 keyboards/default/users.py:15
+msgid "Afzalliklar ⭐"
 msgstr ""
 
-#: keyboards/default/admins.py:19
-msgid "Statistika 📈"
-msgstr ""
-
-#: keyboards/default/admins.py:20
-msgid "Post Jo'natish ⏫"
-msgstr ""
-
-#: keyboards/default/admins.py:31
-msgid "Asosiy menyu ◀"
-msgstr ""
-
-#: keyboards/default/admins.py:42 keyboards/inline/admin_comp.py:46
-#: keyboards/inline/admin_showroom.py:148 keyboards/inline/users.py:12
-#: keyboards/inline/users.py:87
-msgid "Ortga ◀"
-msgstr ""
-
-#: keyboards/default/admins.py:64
-msgid "Telefon raqamni jo'natish 📞"
-msgstr ""
-
-#: keyboards/default/users.py:11
-msgid "Do'konlar 🏣"
-msgstr ""
-
-#: keyboards/default/users.py:15
+#: keyboards/default/admins.py:18 keyboards/default/users.py:18
 msgid "Aloqa ☎"
 msgstr ""
 
-#: keyboards/default/users.py:26
-msgid "Yana rasm 📷"
+#: keyboards/default/admins.py:19 keyboards/default/users.py:19
+msgid "Ma'lumot ℹ"
 msgstr ""
 
-#: keyboards/default/users.py:27
-msgid "Habarga o'tish ➡"
+#: keyboards/default/admins.py:22
+msgid "Statistika 📈"
 msgstr ""
 
-#: keyboards/default/users.py:38
-msgid "Yana ko'rish ⏩"
+#: keyboards/default/admins.py:23
+msgid "Post Jo'natish ⏫"
 msgstr ""
 
-#: keyboards/default/users.py:39
-msgid "Asosiy menyu ⏹"
+#: keyboards/default/admins.py:26 keyboards/default/users.py:22
+msgid "Tilni sozlash ⚙"
 msgstr ""
 
-#: keyboards/inline/admin_comp.py:10 keyboards/inline/admin_comp.py:36
-#: keyboards/inline/admin_showroom.py:133 keyboards/inline/admins.py:30
-msgid "Rasmni o'zgartirish"
+#: keyboards/default/admins.py:37
+msgid "Asosiy menyu ◀"
 msgstr ""
 
-#: keyboards/inline/admin_comp.py:12 keyboards/inline/admin_comp.py:38
-msgid "Shartlarni o'zgartirish"
+#: keyboards/default/admins.py:48
+msgid "Ortga ◀"
 msgstr ""
 
-#: keyboards/inline/admin_comp.py:16
-msgid "Tamomlash 🛑"
+#: keyboards/default/admins.py:59
+msgid "Telefon raqamni jo'natish 📞"
 msgstr ""
 
-#: keyboards/inline/admin_comp.py:17 keyboards/inline/users.py:38
-msgid "Sovg'alar 🎁"
-msgstr ""
-
-#: keyboards/inline/admin_comp.py:20 keyboards/inline/admin_comp.py:42
-#: keyboards/inline/admin_showroom.py:49 keyboards/inline/admin_showroom.py:77
-#: keyboards/inline/admin_showroom.py:145 keyboards/inline/admins.py:34
-msgid "O'zbek 🇺🇿"
-msgstr ""
-
-#: keyboards/inline/admin_comp.py:21 keyboards/inline/admin_comp.py:43
-#: keyboards/inline/admin_showroom.py:45 keyboards/inline/admin_showroom.py:73
-#: keyboards/inline/admin_showroom.py:145 keyboards/inline/admins.py:34
+#: keyboards/inline/admin_course.py:21 keyboards/inline/admins.py:124
+#: keyboards/inline/admins.py:180 keyboards/inline/admins.py:225
+#: keyboards/inline/admins.py:261 keyboards/inline/admins.py:297
 msgid "Ruscha 🇷🇺"
 msgstr ""
 
-#: keyboards/inline/admin_comp.py:24
-msgid "Qatnashuvchilar 👩‍🚒"
+#: keyboards/inline/admin_course.py:24 keyboards/inline/admins.py:127
+#: keyboards/inline/admins.py:183 keyboards/inline/admins.py:227
+#: keyboards/inline/admins.py:263 keyboards/inline/admins.py:299
+msgid "English 🇺🇸"
 msgstr ""
 
-#: keyboards/inline/admin_comp.py:25
-msgid "Hammani ko'rish 👁"
+#: keyboards/inline/admin_course.py:27 keyboards/inline/admins.py:130
+#: keyboards/inline/admins.py:186 keyboards/inline/admins.py:229
+#: keyboards/inline/admins.py:265 keyboards/inline/admins.py:301
+msgid "O'zbek 🇺🇿"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:12 keyboards/inline/admin_showroom.py:41
-msgid "Shovrum qo'shish ➕"
+#: keyboards/inline/admin_course.py:32
+msgid "Yangu kurs ➕"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:23 keyboards/inline/admin_showroom.py:69
-msgid "Diller qo'shish ➕"
+#: keyboards/inline/admin_course.py:33 keyboards/inline/admins.py:136
+#: keyboards/inline/admins.py:192 keyboards/inline/admins.py:220
+#: keyboards/inline/admins.py:256 keyboards/inline/admins.py:292
+msgid "O'chirish 🗑"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:53
-msgid "Dillerlarga o'tish ▶"
+#: keyboards/inline/admin_course.py:38
+msgid "Ro'yxatdan o'tganlar 👤"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:80
-msgid "Shovrumlarga qaytish ◀"
+#: keyboards/inline/admin_course.py:43 keyboards/inline/admin_course.py:79
+#: keyboards/inline/admins.py:141 keyboards/inline/admins.py:197
+#: keyboards/inline/users.py:16 keyboards/inline/users.py:38
+msgid "⬅ Ortga"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:135 keyboards/inline/admins.py:31
-msgid "Matnni o'zgartirish"
+#: keyboards/inline/admin_course.py:49 keyboards/inline/admin_course.py:85
+#: keyboards/inline/admins.py:147 keyboards/inline/admins.py:203
+#: keyboards/inline/users.py:22 keyboards/inline/users.py:44
+msgid "Keyingi ➡"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:139
-msgid "Linkni o'zgartirish"
+#: keyboards/inline/admin_course.py:62
+msgid "Yangi kurs ➕"
 msgstr ""
 
-#: keyboards/inline/admin_showroom.py:141
-msgid "Nomni o'zgartirish"
+#: keyboards/inline/admin_course.py:90
+msgid "Ro'yxatdan o'tish ➕"
 msgstr ""
 
-#: keyboards/inline/admins.py:20
-msgid "Yangi ko'nkurs boshlash"
-msgstr ""
-
-#: keyboards/inline/admins.py:46
-msgid "Ma'lumotlarni qo'shish ➕"
-msgstr ""
-
-#: keyboards/inline/admins.py:57
+#: keyboards/inline/admins.py:22
 msgid "Jo'natish ⏫"
 msgstr ""
 
-#: keyboards/inline/admins.py:58
+#: keyboards/inline/admins.py:23
 msgid "Bekor qilish ❌"
 msgstr ""
 
-#: keyboards/inline/admins.py:69
+#: keyboards/inline/admins.py:34
 msgid "Rasm"
 msgstr ""
 
-#: keyboards/inline/admins.py:70
+#: keyboards/inline/admins.py:35
 msgid "Video"
 msgstr ""
 
-#: keyboards/inline/admins.py:73
-msgid "Hech narsa"
+#: keyboards/inline/admins.py:38
+msgid "Shunchaki matn"
 msgstr ""
 
-#: keyboards/inline/admins.py:84 keyboards/inline/admins.py:99
+#: keyboards/inline/admins.py:49 keyboards/inline/admins.py:62
+#: keyboards/inline/admins.py:77
 msgid "Ha"
 msgstr ""
 
-#: keyboards/inline/admins.py:85 keyboards/inline/admins.py:101
+#: keyboards/inline/admins.py:50 keyboards/inline/admins.py:63
+#: keyboards/inline/admins.py:79
 msgid "Yo'q"
 msgstr ""
 
-#: keyboards/inline/admins.py:115
-msgid "Ism Familya"
+#: keyboards/inline/admins.py:104
+msgid "Yangi ustoz ➕"
 msgstr ""
 
-#: keyboards/inline/admins.py:117 keyboards/inline/users.py:56
-msgid "Til"
+#: keyboards/inline/admins.py:135
+msgid "Yangu o'qituvchi ➕"
 msgstr ""
 
-#: keyboards/inline/admins.py:121
-msgid "Raqam"
+#: keyboards/inline/admins.py:160 keyboards/inline/admins.py:191
+msgid "Yangi natija ➕"
 msgstr ""
 
-#: keyboards/inline/admins.py:123 keyboards/inline/users.py:60
-msgid "Manzil"
+#: keyboards/inline/admins.py:241 keyboards/inline/admins.py:277
+#: keyboards/inline/admins.py:313
+msgid "Ma'lumot qo'shish ➕"
+msgstr ""
+
+#: keyboards/inline/admins.py:324
+msgid "Excel olish (ro'yxatdan o'tganlar)"
 msgstr ""
 
 #: keyboards/inline/locations.py:10
@@ -799,43 +540,453 @@ msgstr ""
 msgid "Qoraqalpog'iston Respublikasi"
 msgstr ""
 
-#: keyboards/inline/users.py:23
-msgid "Excel olish (ro'yxatdan o'tganlar)"
-msgstr ""
+#~ msgid ""
+#~ "Hozirda faol konkurslar mavjud emas. "
+#~ "Yangi qo'shish uchun pastdagi tugmadan "
+#~ "foydalaning."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:24
-msgid "Excel olish ( elektriklar )"
-msgstr ""
+#~ msgid "O'zbek tili uchun konkursni rasmini yuboring."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:35
-msgid "Kanalga a'zo bo'lish ➕"
-msgstr ""
+#~ msgid "Rus tili uchun konkursni rasmini yuboring."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:41
-msgid "Rasmlarni yuborish ⏏"
-msgstr ""
+#~ msgid "O'zbek tili uchun konkurs shartlarini yuboring."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:44
-msgid "Tekshirish ✅"
-msgstr ""
+#~ msgid "Rus tili uchun konkurs shartlarini yuboring."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:55
-msgid "Ism Familiya"
-msgstr ""
+#~ msgid "O'zbek tili uchun sovg'alarni rasmini jo'nating."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:59
-msgid "Telefon raqam"
-msgstr ""
+#~ msgid "Rus tili uchun sovg'alarni rasmini jo'nating."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:86
-msgid "Xaritada ko'rish 🗺"
-msgstr ""
+#~ msgid "O'zbek tili uchun sovg'alarni matnini yuboring."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:139
-msgid "Ha ✅"
-msgstr ""
+#~ msgid "Rus tili uchun sovg'alarni matnini yuboring."
+#~ msgstr ""
 
-#: keyboards/inline/users.py:140
-msgid "Yo'q ❌"
-msgstr ""
+#~ msgid "Konkursni boshlashni hohlaysizmi ?"
+#~ msgstr ""
+
+#~ msgid "Botda xatolik yuz berdi !!!"
+#~ msgstr ""
+
+#~ msgid "Konkurs boshlandi."
+#~ msgstr ""
+
+#~ msgid "Konkurs bekor qilindi."
+#~ msgstr ""
+
+#~ msgid "Konkursni yakunlashni hohlaysizmi ?"
+#~ msgstr ""
+
+#~ msgid "Konkurs yakunlandi."
+#~ msgstr ""
+
+#~ msgid "Konkurs to'xtatilmadi."
+#~ msgstr ""
+
+#~ msgid "Post o'chrildi."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun yangi rasmni kiriting."
+#~ msgstr ""
+
+#~ msgid "Rasm yangilandi."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun yangi rasmni kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun yangi matnni kiriting."
+#~ msgstr ""
+
+#~ msgid "Shartlar yangilandi."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun yangi matnni kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun sovg'alarning yangi rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun sovg'alarning yangi rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek uchun sovg'alarning yangi matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Matn yangilandi."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Bog'lanish malumotlari mavjud emas. Qo'shish"
+#~ " uchun pastdagi tugmadan foydalaning."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun kontank rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun kontank rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun kontank matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun kontank matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Kontakt ma'lumotlari qo'shildi."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun kontank yangi rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun kontank yangi rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun kontank yangi matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun kontank yangi matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Yangi tilni tanlang."
+#~ msgstr ""
+
+#~ msgid "Til yangilangi."
+#~ msgstr ""
+
+#~ msgid "Yangi ism familiyani kiriting"
+#~ msgstr ""
+
+#~ msgid "Ism familiya yangilangi."
+#~ msgstr ""
+
+#~ msgid "Yangi manzilni tanlang"
+#~ msgstr ""
+
+#~ msgid "Yangi telefon raqamni kiriting."
+#~ msgstr ""
+
+#~ msgid "Telefon raqam yangilandi."
+#~ msgstr ""
+
+#~ msgid "Shovrumlar menyusi."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hozirda shovrumlar mavjud emas. Yangi "
+#~ "qo'shish uchun pastdagi tugmadan foydalaning."
+#~ msgstr ""
+
+#~ msgid "Dillerlar menyusi."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hozirda dillerlar mavjud emas. Yangi "
+#~ "qo'shish uchun pastdagi tugmadan foydalaning."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun shovrumning rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun dillerning rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun shovrum rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun shovrum matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun shovrum matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun shovrum nomini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun shovrum nomini kiriting."
+#~ msgstr ""
+
+#~ msgid "Shovrumning xaritadagi linkini kiriting."
+#~ msgstr ""
+
+#~ msgid "Shovrumning qo'shildi."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun diller rasmini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun diller matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun diller matnini kiriting."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun diller nomini kiriting."
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun diller nomini kiriting."
+#~ msgstr ""
+
+#~ msgid "Dillerning xaritadagi linkini kiriting."
+#~ msgstr ""
+
+#~ msgid "Diller qo'shildi."
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun shovrumning yangi rasmini kiriting"
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun shovrumning yangi rasmini kiriting"
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun shovrumning yangi matnini kiriting"
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun shovrumning yangi matnini kiriting"
+#~ msgstr ""
+
+#~ msgid "O'zbek tili uchun shovrumning yangi nomini kiriting"
+#~ msgstr ""
+
+#~ msgid "Rus tili uchun shovrumning yangi nomini kiriting"
+#~ msgstr ""
+
+#~ msgid "Nom yangilandi."
+#~ msgstr ""
+
+#~ msgid "Shovrum uchun yangi manzil linkini kiriting"
+#~ msgstr ""
+
+#~ msgid "Manzil yangilandi."
+#~ msgstr ""
+
+#~ msgid "Faol ko'nkurs yo'q"
+#~ msgstr ""
+
+#~ msgid "Aktiv konkurs mavjud emas."
+#~ msgstr ""
+
+#~ msgid "Boshqa ishtorkchilarni ham ko'rish uchun yana tugmasini bosing."
+#~ msgstr ""
+
+#~ msgid "Boshqa qatnashuvchilar mavjud emas."
+#~ msgstr ""
+
+#~ msgid "Asosiy menyuga xush kelibsiz."
+#~ msgstr ""
+
+#~ msgid "Siz rasmlarni yuborgansiz. ✅"
+#~ msgstr ""
+
+#~ msgid "Eng yaxshi ishlaringizdan na'muna jo'nating (rasm sifatida)."
+#~ msgstr ""
+
+#~ msgid "Avval kanalga a'zo bo'ling."
+#~ msgstr ""
+
+#~ msgid "Yuborgan rasmdagi ishingizga qisqacha ta'rif bering."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Konkursda ishtirok etish uchun so'rovingiz "
+#~ "qabul qilindi. Iltimos kuting,  tez "
+#~ "orada sizga ovoz (❤) yig'ish uchun "
+#~ "Havola yuboriladi."
+#~ msgstr ""
+
+#~ msgid "Botda nosozlik yuz berdi"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Siz konkurs ishtirokchisiga aylandingiz. \n"
+#~ "Ko'proq like to'plang va g'olib bo'ling. \n"
+#~ "\n"
+#~ msgstr ""
+
+#~ msgid "Sizning rasmlaringiz qabul qilinmadi."
+#~ msgstr ""
+
+#~ msgid "Post uchun pastki havolani kiriting."
+#~ msgstr ""
+
+#~ msgid "Post uchun hech narsa kiritilmadi."
+#~ msgstr ""
+
+#~ msgid "Siz elektrik bo'lib ishlaysizmi ?"
+#~ msgstr ""
+
+#~ msgid "Siz ro'yxatdan o'tgansiz."
+#~ msgstr ""
+
+#~ msgid "Kanalga a'zo bo'lgansiz. ✅"
+#~ msgstr ""
+
+#~ msgid "Вы являетесь участником канала. ✅"
+#~ msgstr ""
+
+#~ msgid "Kanalga a'zo bo'lmagansiz. ❌"
+#~ msgstr ""
+
+#~ msgid "Вы не являетесь участником канала. ❌"
+#~ msgstr ""
+
+#~ msgid "Rasm yuborilgan. ✅"
+#~ msgstr ""
+
+#~ msgid "Картинка отправлена. ✅"
+#~ msgstr ""
+
+#~ msgid "Rasm yuborilmagan. ❌"
+#~ msgstr ""
+
+#~ msgid "Картинка не отправлена. ❌"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hozirda faol konkurslar mavjud emas. Tez"
+#~ " orada yangi konkursimizni boshlaymiz."
+#~ msgstr ""
+
+#~ msgid "Bizning rasmiy diller va do'konlarimiz haqida:"
+#~ msgstr ""
+
+#~ msgid "Список наших официальных дилеров."
+#~ msgstr ""
+
+#~ msgid "Bizning rasmiy dillerlarimiz ro'yxati."
+#~ msgstr ""
+
+#~ msgid "Hozirda dillerlar mavjud emas."
+#~ msgstr ""
+
+#~ msgid "Yangi Ism va Familiyani kiriting."
+#~ msgstr ""
+
+#~ msgid "Ism va Familiya yangilandi."
+#~ msgstr ""
+
+#~ msgid "Yangi manzilni tanlang."
+#~ msgstr ""
+
+#~ msgid "Konkurs 🎁"
+#~ msgstr ""
+
+#~ msgid "Shovrumlar 🏣"
+#~ msgstr ""
+
+#~ msgid "Profil 👤"
+#~ msgstr ""
+
+#~ msgid "Aloqalar ☎"
+#~ msgstr ""
+
+#~ msgid "Do'konlar 🏣"
+#~ msgstr ""
+
+#~ msgid "Yana rasm 📷"
+#~ msgstr ""
+
+#~ msgid "Habarga o'tish ➡"
+#~ msgstr ""
+
+#~ msgid "Yana ko'rish ⏩"
+#~ msgstr ""
+
+#~ msgid "Asosiy menyu ⏹"
+#~ msgstr ""
+
+#~ msgid "Rasmni o'zgartirish"
+#~ msgstr ""
+
+#~ msgid "Shartlarni o'zgartirish"
+#~ msgstr ""
+
+#~ msgid "Tamomlash 🛑"
+#~ msgstr ""
+
+#~ msgid "Sovg'alar 🎁"
+#~ msgstr ""
+
+#~ msgid "Qatnashuvchilar 👩‍🚒"
+#~ msgstr ""
+
+#~ msgid "Hammani ko'rish 👁"
+#~ msgstr ""
+
+#~ msgid "Shovrum qo'shish ➕"
+#~ msgstr ""
+
+#~ msgid "Diller qo'shish ➕"
+#~ msgstr ""
+
+#~ msgid "Dillerlarga o'tish ▶"
+#~ msgstr ""
+
+#~ msgid "Shovrumlarga qaytish ◀"
+#~ msgstr ""
+
+#~ msgid "Matnni o'zgartirish"
+#~ msgstr ""
+
+#~ msgid "Linkni o'zgartirish"
+#~ msgstr ""
+
+#~ msgid "Nomni o'zgartirish"
+#~ msgstr ""
+
+#~ msgid "Yangi ko'nkurs boshlash"
+#~ msgstr ""
+
+#~ msgid "Ma'lumotlarni qo'shish ➕"
+#~ msgstr ""
+
+#~ msgid "Hech narsa"
+#~ msgstr ""
+
+#~ msgid "Ism Familya"
+#~ msgstr ""
+
+#~ msgid "Til"
+#~ msgstr ""
+
+#~ msgid "Raqam"
+#~ msgstr ""
+
+#~ msgid "Manzil"
+#~ msgstr ""
+
+#~ msgid "Excel olish ( elektriklar )"
+#~ msgstr ""
+
+#~ msgid "Kanalga a'zo bo'lish ➕"
+#~ msgstr ""
+
+#~ msgid "Rasmlarni yuborish ⏏"
+#~ msgstr ""
+
+#~ msgid "Tekshirish ✅"
+#~ msgstr ""
+
+#~ msgid "Ism Familiya"
+#~ msgstr ""
+
+#~ msgid "Telefon raqam"
+#~ msgstr ""
+
+#~ msgid "Xaritada ko'rish 🗺"
+#~ msgstr ""
+
+#~ msgid "Ha ✅"
+#~ msgstr ""
+
+#~ msgid "Yo'q ❌"
+#~ msgstr ""
 

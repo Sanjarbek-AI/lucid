@@ -24,3 +24,14 @@ async def users_main_menu():
         ], resize_keyboard=True
     )
     return user_menu
+
+
+async def back_users_main_menu():
+    user_menu = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("Asosiy menyu ◀")),
+            ]
+        ], resize_keyboard=True
+    )
+    return user_menu

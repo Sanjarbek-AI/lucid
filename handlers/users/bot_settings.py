@@ -1,8 +1,8 @@
 from aiogram import types
 
 from filters.private_chat import IsPrivate
-from keyboards.default.admins import languages_keyboard, admin_main_menu
-from keyboards.default.users import users_main_menu
+from keyboards.default.admins import languages_keyboard, back_admin_main_menu
+from keyboards.default.users import back_users_main_menu
 from loader import dp, _, bot
 from main import config
 from utils.db_api.commands import update_language
@@ -23,7 +23,7 @@ async def change_language(message: types):
     else:
         text = _("Botda muommo mavjud.", locale="uz")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-    await message.answer(text, reply_markup=await admin_main_menu())
+    await message.answer(text, reply_markup=await back_admin_main_menu())
 
 
 @dp.message_handler(IsPrivate(), text=["English 🇺🇸"], chat_id=config.ADMINS)
@@ -34,7 +34,7 @@ async def change_language(message: types):
     else:
         text = _("Botda muommo mavjud.", locale="en")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-    await message.answer(text, reply_markup=await admin_main_menu())
+    await message.answer(text, reply_markup=await back_admin_main_menu())
 
 
 @dp.message_handler(IsPrivate(), text=["Pусский 🇷🇺"], chat_id=config.ADMINS)
@@ -45,7 +45,7 @@ async def change_language(message: types):
     else:
         text = _("Botda muommo mavjud.", locale="ru")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-    await message.answer(text, reply_markup=await admin_main_menu())
+    await message.answer(text, reply_markup=await back_admin_main_menu())
 
 
 ###############################################################################################################
@@ -65,7 +65,7 @@ async def change_language(message: types):
     else:
         text = _("Botda muommo mavjud.", locale="uz")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-    await message.answer(text, reply_markup=await users_main_menu())
+    await message.answer(text, reply_markup=await back_users_main_menu())
 
 
 @dp.message_handler(IsPrivate(), text=["English 🇺🇸"])
@@ -76,7 +76,7 @@ async def change_language(message: types):
     else:
         text = _("Botda muommo mavjud.", locale="en")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-    await message.answer(text, reply_markup=await users_main_menu())
+    await message.answer(text, reply_markup=await back_users_main_menu())
 
 
 @dp.message_handler(IsPrivate(), text=["Pусский 🇷🇺"])
@@ -87,4 +87,4 @@ async def change_language(message: types):
     else:
         text = _("Botda muommo mavjud.", locale="ru")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-    await message.answer(text, reply_markup=await users_main_menu())
+    await message.answer(text, reply_markup=await back_users_main_menu())

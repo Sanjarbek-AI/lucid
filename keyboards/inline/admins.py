@@ -132,7 +132,7 @@ async def admin_teachers_def(lang, teacher_id, page):
                                                                             teacher_id=teacher_id, page=page))
             ],
             [
-                InlineKeyboardButton(text=_("Yangu o'qituvchi ➕"), callback_data="add_teacher"),
+                InlineKeyboardButton(text=_("Yangi o'qituvchi ➕"), callback_data="add_teacher"),
                 InlineKeyboardButton(text=_("O'chirish 🗑"),
                                      callback_data=teacher_delete.new(act="delete_teacher", lang="uz",
                                                                       teacher_id=teacher_id, page=page))

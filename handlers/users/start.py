@@ -10,20 +10,28 @@ from keyboards.inline.admins import languages
 from keyboards.inline.locations import locations_def
 from loader import dp, _
 from main import config
-from states.admins import Language
 from states.users import Register
 from utils.db_api.commands import register, get_user_active
 
 
 @dp.message_handler(IsPrivate(), chat_id=config.ADMINS, commands="start")
-async def start_admin(message: types.Message):
+async def start_admin(message: types.Message, state: FSMContext):
     if await get_user_active(message.from_user.id):
         text = _("Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. 😊")
         await message.answer(text, reply_markup=await admin_main_menu())
     else:
+        await state.update_data({
+            "language": "uz",
+            "telegram_id": message.chat.id,
+            "full_name": message.from_user.full_name,
+            "phone_number": "-"
+        })
+
+        await register(message, state)
+        await state.finish()
+
         text = "Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. \nIltimos tilni tanlang. 😊"
-        await message.answer(text, reply_markup=languages)
-        await Language.select.set()
+        await message.answer(text, reply_markup=await admin_main_menu())
 
 
 @dp.message_handler(IsPrivate(), commands="start")
@@ -45,7 +53,7 @@ async def language(call: CallbackQuery, state: FSMContext):
         "language": call.data,
     })
 
-    text = _("Iltimos, Ism va Familiayangizni kiriting.")
+    text = _("Iltimos, Ism va Familiayangizni kiriting.", locale=call.data)
     await Register.full_name.set()
     await call.message.answer(text, reply_markup=ReplyKeyboardRemove())
 
@@ -55,15 +63,17 @@ async def full_name(message: types.Message, state: FSMContext):
     await state.update_data({
         "full_name": message.text,
     })
+    data = await state.get_data()
 
-    text = _("Iltimos, Telefon raqamingizni kiriting.")
+    text = _("Iltimos, Telefon raqamingizni kiriting.", locale=data.get('language'))
     await message.answer(text, reply_markup=await contact_def())
     await Register.phone_number.set()
 
 
 @dp.message_handler(state=Register.phone_number)
-async def get_phone_number(message: types.Message):
-    text = _("Iltimos tugmadan foydalaning.")
+async def get_phone_number(message: types.Message, state: FSMContext):
+    data = await state.get_data()
+    text = _("Iltimos tugmadan foydalaning.", locale=data.get('language'))
     await message.answer(text, reply_markup=await contact_def())
 
 
@@ -72,8 +82,9 @@ async def get_phone_number(message: types.Message, state: FSMContext):
     await state.update_data({
         "phone_number": message.contact.phone_number
     })
+    data = await state.get_data()
 
-    text = _("Iltimos, doimiy yashash manzilingizni tanlang.")
+    text = _("Iltimos, doimiy yashash manzilingizni tanlang.", locale=data.get('language'))
     await message.answer(text, reply_markup=await locations_def())
     await Register.location.set()
 
@@ -84,6 +95,7 @@ async def location(call: CallbackQuery, state: FSMContext):
         "location": call.data,
         "telegram_id": call.from_user.id,
     })
+    data = await state.get_data()
 
     registered_user = await register(call.message, state)
     if registered_user:
@@ -94,37 +106,3 @@ async def location(call: CallbackQuery, state: FSMContext):
         text = _("Botda nosozlik yuz berdi.")
         await call.message.answer(text, reply_markup=await users_main_menu())
         await state.finish()
-
-# @dp.callback_query_handler(text=["checking"])
-# async def checking(call: CallbackQuery):
-#     comp = await get_competitions()
-#     user = await get_user(call.from_user.id)
-#     lang = ""
-#     if user:
-#         lang = user["language"]
-#
-#     for channel in CHANNELS:
-#         status = await check(call.from_user.id, channel)
-#         if status:
-#             if lang == "uz":
-#                 answer = _("Kanalga a'zo bo'lgansiz. ✅")
-#             else:
-#                 answer = _("Вы являетесь участником канала. ✅")
-#         else:
-#             if lang == "uz":
-#                 answer = _("Kanalga a'zo bo'lmagansiz. ❌")
-#             else:
-#                 answer = _("Вы не являетесь участником канала. ❌")
-#         await call.message.answer(answer, reply_markup=await users_main_menu())
-#
-#     if await get_comp_user(call.from_user.id, comp["id"]):
-#         if lang == "uz":
-#             answer = _("Rasm yuborilgan. ✅")
-#         else:
-#             answer = _("Картинка отправлена. ✅")
-#     else:
-#         if lang == "uz":
-#             answer = _("Rasm yuborilmagan. ❌")
-#         else:
-#             answer = _("Картинка не отправлена. ❌")
-#     await call.message.answer(answer, reply_markup=await users_main_menu())

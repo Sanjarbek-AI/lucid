@@ -17,7 +17,7 @@ async def select_language(call: CallbackQuery, state: FSMContext):
     })
 
     user = await register(call.message, state)
-    text = _("🤖 Asosiy menyuga xush kelibsiz.")
+    text = _("🤖 Asosiy menyuga xush kelibsiz.", locale=call.data)
     await call.message.answer(text, reply_markup=await admin_main_menu())
     await state.finish()
 
