@@ -11,7 +11,7 @@ from keyboards.inline.locations import locations_def
 from loader import dp, _
 from main import config
 from states.users import Register
-from utils.db_api.commands import register, get_user_active
+from utils.db_api.commands import register, get_user_active, register_start, update_user
 
 
 @dp.message_handler(IsPrivate(), chat_id=config.ADMINS, commands="start")
@@ -30,7 +30,7 @@ async def start_admin(message: types.Message, state: FSMContext):
         await register(message, state)
         await state.finish()
 
-        text = "Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. \nIltimos tilni tanlang. 😊"
+        text = _("Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. 😊")
         await message.answer(text, reply_markup=await admin_main_menu())
 
 
@@ -52,6 +52,7 @@ async def language(call: CallbackQuery, state: FSMContext):
     await state.update_data({
         "language": call.data,
     })
+    await register_start(call.message, state)
 
     text = _("Iltimos, Ism va Familiayangizni kiriting.", locale=call.data)
     await Register.full_name.set()
@@ -97,12 +98,11 @@ async def location(call: CallbackQuery, state: FSMContext):
     })
     data = await state.get_data()
 
-    registered_user = await register(call.message, state)
+    registered_user = await update_user(call.message, state)
+
     if registered_user:
-        await state.finish()
-        text = _("Siz muvofaqqiyatli ro'yxatdan o'tdingiz.")
-        await call.message.answer(text, reply_markup=await users_main_menu())
+        text = _("Siz muvofaqqiyatli ro'yxatdan o'tdingiz.", locale=data.get("language"))
     else:
-        text = _("Botda nosozlik yuz berdi.")
-        await call.message.answer(text, reply_markup=await users_main_menu())
-        await state.finish()
+        text = _("Botda nosozlik yuz berdi.", locale=data.get("language"))
+    await call.message.answer(text, reply_markup=await users_main_menu())
+    await state.finish()

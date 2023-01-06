@@ -85,7 +85,7 @@ async def register(message, state):
         return False
 
 
-async def update_user_status(message, state):
+async def update_user(message, state):
     try:
         data = await state.get_data()
         query = users.update().values(
@@ -104,12 +104,13 @@ async def update_user_status(message, state):
         return False
 
 
-async def register_start(message, lang):
+async def register_start(message, state):
     try:
+        data = await state.get_data()
         query = users.insert().values(
-            telegram_id=message.from_user.id,
+            telegram_id=message.chat.id,
             full_name=message.from_user.full_name,
-            language=lang,
+            language=data.get("language"),
             status=UserStatus.inactive,
             created_at=message.date,
             updated_at=message.date

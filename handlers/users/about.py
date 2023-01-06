@@ -131,7 +131,7 @@ async def delete_contact_function(call: CallbackQuery, callback_data: dict):
 # # #############################################################################
 # # # contact button function for users
 
-@dp.message_handler(text=["Ma'lumot ℹ", "Information ℹ", "Информацияℹ"])
+@dp.message_handler(text=["Ma'lumot ℹ", "Information ℹ", "Информация ℹ"])
 async def admin_contact(message: types.Message):
     about = await get_about()
     user = await get_user(message.from_user.id)
