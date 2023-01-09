@@ -8,10 +8,16 @@ from keyboards.default.admins import contact_def, admin_main_menu
 from keyboards.default.users import users_main_menu
 from keyboards.inline.admins import languages
 from keyboards.inline.locations import locations_def
-from loader import dp, _
+from keyboards.inline.users import what_is_logistic, register_start_video
+from loader import dp, _, bot
 from main import config
 from states.users import Register
-from utils.db_api.commands import register, get_user_active, register_start, update_user
+from utils.db_api.commands import register, get_user_active, update_user, register_video_start, update_user_language
+
+
+# @dp.message_handler(state="*", chat_id=config.ADMINS, content_types=types.ContentTypes.VIDEO)
+# async def course_image_en(message: types.Message):
+#     await message.answer(message.video.file_id)
 
 
 @dp.message_handler(IsPrivate(), chat_id=config.ADMINS, commands="start")
@@ -42,9 +48,26 @@ async def start_users(message: types.Message):
         await message.answer(text, reply_markup=await users_main_menu())
 
     else:
-        text = "Iltimos, tilni tanlang. 🇺🇿\nВыберите язык. 🇷🇺\nPlease, select language 🇺🇸"
-        await Register.language.set()
-        await message.answer(text, reply_markup=languages)
+        await register_video_start(message)
+
+        file_id = "BAACAgIAAxkBAAIDaWO8RfK-cViDDxLKf43Lth_tWHcQAAIdJQACVTjhSRiMyZYW1PHMLQQ"
+        caption = "Assalomu alaykum, videoni ko'ring va ajoyib ma'lumotlarga ega bo'ling 😃"
+        await bot.send_video(chat_id=message.chat.id, video=file_id, caption=caption, reply_markup=what_is_logistic)
+
+
+@dp.callback_query_handler(text="what_logistic")
+async def what_logistic(call: CallbackQuery):
+    file_id = "BAACAgIAAxkBAAIDcmO8SVELMNPR46ARtUZPUVIUHyDdAAK-KwACw9fgSW_D3sNHynroLQQ"
+    caption = _("Albatta siz uchun foydali bo'ladi. 🤩")
+    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
+                         reply_markup=register_start_video)
+
+
+@dp.callback_query_handler(text="register_start_video")
+async def what_logistic(call: CallbackQuery):
+    text = "Iltimos, tilni tanlang. 🇺🇿\nВыберите язык. 🇷🇺\nPlease, select language 🇺🇸"
+    await Register.language.set()
+    await call.message.answer(text, reply_markup=languages)
 
 
 @dp.callback_query_handler(state=Register.language)
@@ -52,9 +75,10 @@ async def language(call: CallbackQuery, state: FSMContext):
     await state.update_data({
         "language": call.data,
     })
-    await register_start(call.message, state)
 
-    text = _("Iltimos, Ism va Familiayangizni kiriting.", locale=call.data)
+    await update_user_language(call.message, call.data)
+
+    text = _("Iltimos, ism va familiyangizni kiriting.", locale=call.data)
     await Register.full_name.set()
     await call.message.answer(text, reply_markup=ReplyKeyboardRemove())
 
@@ -101,7 +125,7 @@ async def location(call: CallbackQuery, state: FSMContext):
     registered_user = await update_user(call.message, state)
 
     if registered_user:
-        text = _("Siz muvofaqqiyatli ro'yxatdan o'tdingiz.", locale=data.get("language"))
+        text = _("Siz muvafaqqiyatli ro'yxatdan o'tdingiz. ✅", locale=data.get("language"))
     else:
         text = _("Botda nosozlik yuz berdi.", locale=data.get("language"))
     await call.message.answer(text, reply_markup=await users_main_menu())

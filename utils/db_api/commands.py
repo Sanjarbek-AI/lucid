@@ -47,6 +47,15 @@ async def get_users():
         return False
 
 
+async def get_users_all():
+    try:
+        query = users.select().where()
+        return await database.fetch_all(query=query)
+    except Exception as exc:
+        print(exc)
+        return False
+
+
 async def get_electric_users():
     try:
         query = users.select().where(users.c.electric_status == 1)
@@ -104,6 +113,19 @@ async def update_user(message, state):
         return False
 
 
+async def update_user_language(message, language):
+    try:
+        query = users.update().values(
+            language=language,
+            updated_at=message.date
+        ).where(users.c.telegram_id == message.chat.id)
+        await database.execute(query=query)
+        return True
+    except Exception as exc:
+        print(exc)
+        return False
+
+
 async def register_start(message, state):
     try:
         data = await state.get_data()
@@ -111,6 +133,23 @@ async def register_start(message, state):
             telegram_id=message.chat.id,
             full_name=message.from_user.full_name,
             language=data.get("language"),
+            status=UserStatus.inactive,
+            created_at=message.date,
+            updated_at=message.date
+        )
+        await database.execute(query=query)
+        return True
+    except Exception as exc:
+        print(exc)
+        return False
+
+
+async def register_video_start(message):
+    try:
+        query = users.insert().values(
+            telegram_id=message.chat.id,
+            full_name=message.from_user.full_name,
+            language="uz",
             status=UserStatus.inactive,
             created_at=message.date,
             updated_at=message.date

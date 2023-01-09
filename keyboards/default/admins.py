@@ -23,7 +23,7 @@ async def admin_main_menu():
                 KeyboardButton(text=_("Post Jo'natish ⏫"))
             ],
             [
-                KeyboardButton(text=_("Tilni sozlash ⚙")),
+                KeyboardButton(text=_("Tilni sozlash ⚙"))
             ]
         ], resize_keyboard=True
     )

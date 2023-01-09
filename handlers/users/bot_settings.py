@@ -19,7 +19,6 @@ async def change_language(message: types):
 async def change_language(message: types):
     if await update_language("uz", message.chat.id, message):
         text = _("Til o'zgartirildi. ✅", locale="uz")
-        await message.answer(text)
     else:
         text = _("Botda muommo mavjud.", locale="uz")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
@@ -30,7 +29,6 @@ async def change_language(message: types):
 async def change_language(message: types):
     if await update_language("en", message.chat.id, message):
         text = _("Til o'zgartirildi. ✅", locale="en")
-        await message.answer(text)
     else:
         text = _("Botda muommo mavjud.", locale="en")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
@@ -41,7 +39,6 @@ async def change_language(message: types):
 async def change_language(message: types):
     if await update_language("ru", message.chat.id, message):
         text = _("Til o'zgartirildi. ✅", locale="ru")
-        await message.answer(text)
     else:
         text = _("Botda muommo mavjud.", locale="ru")
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)

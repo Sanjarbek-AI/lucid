@@ -50,3 +50,18 @@ async def user_results_def(lang, result_id, page):
     return results_user
 
 
+what_is_logistic = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Logistika nima ? 🤔", callback_data="what_logistic")
+        ]
+    ]
+)
+
+register_start_video = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Ro'yxatdan o'tish 😊", callback_data="register_start_video")
+        ]
+    ]
+)

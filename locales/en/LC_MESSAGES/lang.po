@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-05 14:30+0500\n"
+"POT-Creation-Date: 2023-01-07 15:11+0500\n"
 "PO-Revision-Date: 2022-12-31 09:21+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -74,8 +74,8 @@ msgstr "Data is deleted. ✅"
 #: handlers/users/admin_courses.py:267 handlers/users/admin_courses.py:294
 #: handlers/users/admin_courses.py:314 handlers/users/advantage.py:125
 #: handlers/users/bot_settings.py:24 handlers/users/bot_settings.py:35
-#: handlers/users/bot_settings.py:46 handlers/users/bot_settings.py:66
-#: handlers/users/bot_settings.py:77 handlers/users/bot_settings.py:88
+#: handlers/users/bot_settings.py:46 handlers/users/bot_settings.py:65
+#: handlers/users/bot_settings.py:75 handlers/users/bot_settings.py:85
 #: handlers/users/contact.py:125 handlers/users/results.py:52
 #: handlers/users/results.py:148 handlers/users/results.py:173
 #: handlers/users/results.py:200 handlers/users/results.py:246
@@ -101,7 +101,6 @@ msgid ""
 "Hozirda kurslar mavjud emas, yangi kurs qo'shish uchun pastdagi tugmadan "
 "foydalaning."
 msgstr "Not data, to add new data, use button below."
-
 
 #: handlers/users/admin_courses.py:42
 msgid "Kurs o'chirildi. ✅"
@@ -169,7 +168,7 @@ msgstr "Please, select language 😊"
 
 #: handlers/users/bot_settings.py:21 handlers/users/bot_settings.py:32
 #: handlers/users/bot_settings.py:43 handlers/users/bot_settings.py:63
-#: handlers/users/bot_settings.py:74 handlers/users/bot_settings.py:85
+#: handlers/users/bot_settings.py:73 handlers/users/bot_settings.py:83
 msgid "Til o'zgartirildi. ✅"
 msgstr "Language is changed. ✅"
 
@@ -266,7 +265,7 @@ msgstr "Post is sending to all users..."
 msgid "Habar barcha foydalanuvchilarga jo'natildi."
 msgstr "Post is sent successfully."
 
-#: handlers/users/send_post.py:313 handlers/users/start.py:94
+#: handlers/users/send_post.py:313 handlers/users/start.py:106
 msgid "Botda nosozlik yuz berdi."
 msgstr "Bot has some problem."
 
@@ -274,32 +273,33 @@ msgstr "Bot has some problem."
 msgid "Habar bekor qilindi."
 msgstr "Post is canceled."
 
-#: handlers/users/start.py:21
+#: handlers/users/start.py:20 handlers/users/start.py:33
 msgid "Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. 😊"
 msgstr "Assalomu alaykum. You are one of admins 😊"
 
-#: handlers/users/start.py:33
+#: handlers/users/start.py:41
 msgid "Bot xizmatiga xush kelibsiz."
 msgstr "Welcome to bot service."
 
-#: handlers/users/start.py:48
-msgid "Iltimos, Ism va Familiayangizni kiriting."
+#: handlers/users/start.py:57
+msgid "Iltimos, ism va familiyangizni kiriting."
 msgstr "Please, enter your full name."
 
-#: handlers/users/start.py:59
+#: handlers/users/start.py:69
 msgid "Iltimos, Telefon raqamingizni kiriting."
 msgstr "Please, enter your phone number."
 
-#: handlers/users/start.py:66
+#: handlers/users/start.py:77
 msgid "Iltimos tugmadan foydalaning."
 msgstr "Please, use button below."
 
-#: handlers/users/start.py:76
+#: handlers/users/start.py:88
 msgid "Iltimos, doimiy yashash manzilingizni tanlang."
 msgstr "Please, select location that you live."
 
-#: handlers/users/start.py:91
-msgid "Siz muvofaqqiyatli ro'yxatdan o'tdingiz."
+#: handlers/users/start.py:104
+#, fuzzy
+msgid "Siz muvafaqqiyatli ro'yxatdan o'tdingiz. ✅"
 msgstr "You are successfully registered."
 
 #: handlers/users/teachers.py:30
@@ -372,7 +372,7 @@ msgstr "Send Post ⏫"
 msgid "Tilni sozlash ⚙"
 msgstr "Change language ⚙"
 
-#: keyboards/default/admins.py:37
+#: keyboards/default/admins.py:37 keyboards/default/users.py:33
 msgid "Asosiy menyu ◀"
 msgstr "Main menu ◀"
 
@@ -471,7 +471,8 @@ msgid "Yangi ustoz ➕"
 msgstr "New teacher ➕"
 
 #: keyboards/inline/admins.py:135
-msgid "Yangu o'qituvchi ➕"
+#, fuzzy
+msgid "Yangi o'qituvchi ➕"
 msgstr "New teacher ➕"
 
 #: keyboards/inline/admins.py:160 keyboards/inline/admins.py:191

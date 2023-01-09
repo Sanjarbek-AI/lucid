@@ -13,7 +13,7 @@ from keyboards.inline.admins import send_post_def, send_admin_post_all, image_or
 from loader import dp, _, bot
 from main import config
 from states.admins import SendPost
-from utils.db_api.commands import get_users
+from utils.db_api.commands import get_users, get_users_all
 
 
 @dp.message_handler(IsPrivate(), text=["Post Jo'natish ⏫", "Send Post ⏫", "Опубликовать Отправить ⏫"],
@@ -197,7 +197,7 @@ async def send_post(message: types.Message, state: FSMContext):
 @dp.callback_query_handler(state=SendPost.waiting, text="send_post_yes", chat_id=config.ADMINS)
 async def send_post_yes(call: CallbackQuery, state: FSMContext):
     data = await state.get_data()
-    users = await get_users()
+    users = await get_users_all()
     image = data.get('image')
     video = data.get('video')
     text = data.get('text')
