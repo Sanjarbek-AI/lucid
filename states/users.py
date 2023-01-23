@@ -1,9 +1,14 @@
 from aiogram.dispatcher.filters.state import StatesGroup, State
 
 
+class Video(StatesGroup):
+    video_1 = State()
+
+
 class Register(StatesGroup):
-    electric_status_1 = State()
-    electric_status_2 = State()
+    video_1 = State()
+    video_2 = State()
+    register = State()
     language = State()
     location = State()
     full_name = State()
@@ -15,6 +20,7 @@ class RegisterLike(StatesGroup):
     location = State()
     full_name = State()
     phone_number = State()
+
 
 class UserSendPost(StatesGroup):
     images = State()

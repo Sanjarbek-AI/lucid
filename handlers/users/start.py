@@ -8,7 +8,7 @@ from keyboards.default.admins import contact_def, admin_main_menu
 from keyboards.default.users import users_main_menu
 from keyboards.inline.admins import languages
 from keyboards.inline.locations import locations_def
-from keyboards.inline.users import what_is_logistic, register_start_video
+from keyboards.inline.users import register_start_video, video_1, video_2
 from loader import dp, _, bot
 from main import config
 from states.users import Register
@@ -48,26 +48,10 @@ async def start_users(message: types.Message):
         await message.answer(text, reply_markup=await users_main_menu())
 
     else:
+        text = "Iltimos, tilni tanlang. 🇺🇿\nВыберите язык. 🇷🇺\nPlease, select language 🇺🇸"
+        await Register.language.set()
+        await message.answer(text, reply_markup=languages)
         await register_video_start(message)
-
-        file_id = "BAACAgIAAxkBAAIDaWO8RfK-cViDDxLKf43Lth_tWHcQAAIdJQACVTjhSRiMyZYW1PHMLQQ"
-        caption = "Assalomu alaykum, videoni ko'ring va ajoyib ma'lumotlarga ega bo'ling 😃"
-        await bot.send_video(chat_id=message.chat.id, video=file_id, caption=caption, reply_markup=what_is_logistic)
-
-
-@dp.callback_query_handler(text="what_logistic")
-async def what_logistic(call: CallbackQuery):
-    file_id = "BAACAgIAAxkBAAIDcmO8SVELMNPR46ARtUZPUVIUHyDdAAK-KwACw9fgSW_D3sNHynroLQQ"
-    caption = _("Albatta siz uchun foydali bo'ladi. 🤩")
-    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
-                         reply_markup=register_start_video)
-
-
-@dp.callback_query_handler(text="register_start_video")
-async def what_logistic(call: CallbackQuery):
-    text = "Iltimos, tilni tanlang. 🇺🇿\nВыберите язык. 🇷🇺\nPlease, select language 🇺🇸"
-    await Register.language.set()
-    await call.message.answer(text, reply_markup=languages)
 
 
 @dp.callback_query_handler(state=Register.language)
@@ -78,7 +62,40 @@ async def language(call: CallbackQuery, state: FSMContext):
 
     await update_user_language(call.message, call.data)
 
-    text = _("Iltimos, ism va familiyangizni kiriting.", locale=call.data)
+    if call.data == "uz":
+        file_id = "BAACAgIAAxkBAAIFW2POmGUR0hIFHixPuj2K_TXsdlJCAALPIQAC7tp5SrqPsRNsc4blLQQ"
+    elif call.data == "ru":
+        file_id = "BAACAgIAAxkBAAIFW2POmGUR0hIFHixPuj2K_TXsdlJCAALPIQAC7tp5SrqPsRNsc4blLQQ"
+    else:
+        file_id = "BAACAgIAAxkBAAIFW2POmGUR0hIFHixPuj2K_TXsdlJCAALPIQAC7tp5SrqPsRNsc4blLQQ"
+
+    caption = _("Assalomu alaykum, videoni ko'ring va ajoyib ma'lumotlarga ega bo'ling 😃", locale=call.data)
+
+    await Register.video_1.set()
+    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption, reply_markup=video_1)
+
+
+@dp.callback_query_handler(text="video_1", state=Register.video_1)
+async def video_2_func(call: CallbackQuery):
+    file_id = "BAACAgIAAxkBAAIFfWPOninQ7t60EPNevizIjIdHTtreAAJCIAACWp55So-ohKuBsBj-LQQ"
+    caption = _("Albatta siz uchun foydali bo'ladi. 🤩")
+    await Register.video_2.set()
+    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
+                         reply_markup=video_2)
+
+
+@dp.callback_query_handler(text="video_2", state=Register.video_2)
+async def video_3_func(call: CallbackQuery):
+    file_id = "BAACAgIAAxkBAAIFf2POnkQAAQUbkMdLrI7KSpTAL0fw5AACRCAAAlqeeUpWY07lTfO5IS0E"
+    caption = _("Video orqali ko'plab foydali ma'lumotlarga ega bo'ling. 😍")
+    await Register.register.set()
+    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
+                         reply_markup=register_start_video)
+
+
+@dp.callback_query_handler(text="register_start_video", state=Register.register)
+async def register_start(call: CallbackQuery):
+    text = _("Iltimos, ism va familiyangizni kiriting.")
     await Register.full_name.set()
     await call.message.answer(text, reply_markup=ReplyKeyboardRemove())
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-07 15:11+0500\n"
+"POT-Creation-Date: 2023-01-23 20:43+0500\n"
 "PO-Revision-Date: 2022-12-31 09:21+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uz\n"
@@ -73,9 +73,9 @@ msgstr ""
 #: handlers/users/about.py:126 handlers/users/admin_courses.py:150
 #: handlers/users/admin_courses.py:267 handlers/users/admin_courses.py:294
 #: handlers/users/admin_courses.py:314 handlers/users/advantage.py:125
-#: handlers/users/bot_settings.py:24 handlers/users/bot_settings.py:35
-#: handlers/users/bot_settings.py:46 handlers/users/bot_settings.py:65
-#: handlers/users/bot_settings.py:75 handlers/users/bot_settings.py:85
+#: handlers/users/bot_settings.py:23 handlers/users/bot_settings.py:33
+#: handlers/users/bot_settings.py:43 handlers/users/bot_settings.py:62
+#: handlers/users/bot_settings.py:72 handlers/users/bot_settings.py:82
 #: handlers/users/contact.py:125 handlers/users/results.py:52
 #: handlers/users/results.py:148 handlers/users/results.py:173
 #: handlers/users/results.py:200 handlers/users/results.py:246
@@ -160,13 +160,13 @@ msgid ""
 "Tez orada siz bilan bog'lanamiz. 😊"
 msgstr ""
 
-#: handlers/users/bot_settings.py:14 handlers/users/bot_settings.py:56
+#: handlers/users/bot_settings.py:14 handlers/users/bot_settings.py:53
 msgid "Iltimos, o'zingizga qulay tilni tanlang 😊"
 msgstr ""
 
-#: handlers/users/bot_settings.py:21 handlers/users/bot_settings.py:32
-#: handlers/users/bot_settings.py:43 handlers/users/bot_settings.py:63
-#: handlers/users/bot_settings.py:73 handlers/users/bot_settings.py:83
+#: handlers/users/bot_settings.py:21 handlers/users/bot_settings.py:31
+#: handlers/users/bot_settings.py:41 handlers/users/bot_settings.py:60
+#: handlers/users/bot_settings.py:70 handlers/users/bot_settings.py:80
 msgid "Til o'zgartirildi. ✅"
 msgstr ""
 
@@ -263,7 +263,7 @@ msgstr ""
 msgid "Habar barcha foydalanuvchilarga jo'natildi."
 msgstr ""
 
-#: handlers/users/send_post.py:313 handlers/users/start.py:106
+#: handlers/users/send_post.py:313 handlers/users/start.py:147
 msgid "Botda nosozlik yuz berdi."
 msgstr ""
 
@@ -271,31 +271,43 @@ msgstr ""
 msgid "Habar bekor qilindi."
 msgstr ""
 
-#: handlers/users/start.py:20 handlers/users/start.py:33
+#: handlers/users/start.py:26 handlers/users/start.py:39
 msgid "Assalomu alaykum. Siz bot boshqaruvchilaridan birisiz. 😊"
 msgstr ""
 
-#: handlers/users/start.py:41
+#: handlers/users/start.py:47
 msgid "Bot xizmatiga xush kelibsiz."
 msgstr ""
 
-#: handlers/users/start.py:57
+#: handlers/users/start.py:72
+msgid "Assalomu alaykum, videoni ko'ring va ajoyib ma'lumotlarga ega bo'ling 😃"
+msgstr ""
+
+#: handlers/users/start.py:81
+msgid "Albatta siz uchun foydali bo'ladi. 🤩"
+msgstr ""
+
+#: handlers/users/start.py:90
+msgid "Video orqali ko'plab foydali ma'lumotlarga ega bo'ling. 😍"
+msgstr ""
+
+#: handlers/users/start.py:98
 msgid "Iltimos, ism va familiyangizni kiriting."
 msgstr ""
 
-#: handlers/users/start.py:69
+#: handlers/users/start.py:110
 msgid "Iltimos, Telefon raqamingizni kiriting."
 msgstr ""
 
-#: handlers/users/start.py:77
+#: handlers/users/start.py:118
 msgid "Iltimos tugmadan foydalaning."
 msgstr ""
 
-#: handlers/users/start.py:88
+#: handlers/users/start.py:129
 msgid "Iltimos, doimiy yashash manzilingizni tanlang."
 msgstr ""
 
-#: handlers/users/start.py:104
+#: handlers/users/start.py:145
 msgid "Siz muvafaqqiyatli ro'yxatdan o'tdingiz. ✅"
 msgstr ""
 
@@ -538,6 +550,10 @@ msgstr ""
 
 #: keyboards/inline/locations.py:37
 msgid "Qoraqalpog'iston Respublikasi"
+msgstr ""
+
+#: keyboards/inline/users.py:56 keyboards/inline/users.py:63
+msgid "Keyingi video ➡"
 msgstr ""
 
 #~ msgid ""
@@ -997,5 +1013,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Yangu o'qituvchi ➕"
+#~ msgstr ""
+
+#~ msgid "Keyingi video ?"
 #~ msgstr ""
 
