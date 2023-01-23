@@ -322,6 +322,7 @@ async def export_excel_users():
         inline_keyboard=[
             [
                 InlineKeyboardButton(text=_("Excel olish (ro'yxatdan o'tganlar)"), callback_data="registered_users"),
+                InlineKeyboardButton(text=_("Delete user by phone"), callback_data="delete_user_by_phone"),
             ]
         ]
     )

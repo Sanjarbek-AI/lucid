@@ -5,6 +5,10 @@ class Language(StatesGroup):
     select = State()
 
 
+class DeleteUser(StatesGroup):
+    delete = State()
+
+
 class AddCompetition(StatesGroup):
     image_uz = State()
     image_ru = State()
