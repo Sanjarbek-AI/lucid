@@ -13,7 +13,7 @@ from utils.db_api.commands import get_user, get_about, add_about, delete_about
 
 
 # about button function for admins
-@dp.message_handler(text=["Uy qidirish 🔎", "Information ℹ", "Информацияℹ"], chat_id=config.ADMINS)
+@dp.message_handler(text=["Ma'lumot ℹ", "Information ℹ", "Информацияℹ"], chat_id=config.ADMINS)
 async def admin_information(message: types.Message):
     about = await get_about()
     user = await get_user(message.from_user.id)
