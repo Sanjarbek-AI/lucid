@@ -6,6 +6,7 @@ class Language(StatesGroup):
 
 
 class DeleteUser(StatesGroup):
+    ask = State()
     delete = State()
 
 

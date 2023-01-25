@@ -11,6 +11,15 @@ async def get_user(telegram_id):
         return False
 
 
+async def get_user_by_phone(phone):
+    try:
+        query = users.select().where(users.c.phone_number == phone)
+        return await database.fetch_one(query=query)
+    except Exception as exc:
+        print(exc)
+        return False
+
+
 async def delete_user(phone):
     try:
         query = users.delete().where(users.c.phone_number == phone)

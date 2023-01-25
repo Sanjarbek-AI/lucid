@@ -54,7 +54,6 @@ async def text_or_not():
     return send_post
 
 
-
 async def link_or_not():
     send_post = InlineKeyboardMarkup(
         inline_keyboard=[
@@ -327,3 +326,15 @@ async def export_excel_users():
         ]
     )
     return users_excel
+
+
+async def admin_delete_user():
+    delete = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=_("Delete 🗑"), callback_data="user_delete_yes"),
+                InlineKeyboardButton(text=_("Cancel ❌"), callback_data="user_delete_no"),
+            ]
+        ]
+    )
+    return delete
