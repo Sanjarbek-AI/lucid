@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-23 20:43+0500\n"
+"POT-Creation-Date: 2023-02-08 16:32+0500\n"
 "PO-Revision-Date: 2022-12-31 09:21+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -65,25 +65,25 @@ msgstr "Информация успешно добавлена. ✅"
 msgid "Ma'lumot qo'shilmadi. Botda muommo mavjud."
 msgstr "Информация не добавлена. Есть проблема с ботом."
 
-#: handlers/users/about.py:124 handlers/users/advantage.py:123
-#: handlers/users/contact.py:123 handlers/users/results.py:40
-#: handlers/users/teachers.py:40
+#: handlers/users/about.py:124 handlers/users/admin_statistics.py:49
+#: handlers/users/advantage.py:123 handlers/users/contact.py:123
+#: handlers/users/results.py:40 handlers/users/teachers.py:40
 msgid "Ma'lumot o'chirildi. ✅"
 msgstr "Информация удалена. ✅"
 
 #: handlers/users/about.py:126 handlers/users/admin_courses.py:150
 #: handlers/users/admin_courses.py:267 handlers/users/admin_courses.py:294
-#: handlers/users/admin_courses.py:314 handlers/users/advantage.py:125
-#: handlers/users/bot_settings.py:23 handlers/users/bot_settings.py:33
-#: handlers/users/bot_settings.py:43 handlers/users/bot_settings.py:62
-#: handlers/users/bot_settings.py:72 handlers/users/bot_settings.py:82
-#: handlers/users/contact.py:125 handlers/users/results.py:52
-#: handlers/users/results.py:148 handlers/users/results.py:173
-#: handlers/users/results.py:200 handlers/users/results.py:246
-#: handlers/users/results.py:273 handlers/users/teachers.py:52
-#: handlers/users/teachers.py:148 handlers/users/teachers.py:173
-#: handlers/users/teachers.py:200 handlers/users/teachers.py:246
-#: handlers/users/teachers.py:273
+#: handlers/users/admin_courses.py:314 handlers/users/admin_statistics.py:51
+#: handlers/users/advantage.py:125 handlers/users/bot_settings.py:23
+#: handlers/users/bot_settings.py:33 handlers/users/bot_settings.py:43
+#: handlers/users/bot_settings.py:62 handlers/users/bot_settings.py:72
+#: handlers/users/bot_settings.py:82 handlers/users/contact.py:125
+#: handlers/users/results.py:52 handlers/users/results.py:148
+#: handlers/users/results.py:173 handlers/users/results.py:200
+#: handlers/users/results.py:246 handlers/users/results.py:273
+#: handlers/users/teachers.py:52 handlers/users/teachers.py:148
+#: handlers/users/teachers.py:173 handlers/users/teachers.py:200
+#: handlers/users/teachers.py:246 handlers/users/teachers.py:273
 msgid "Botda muommo mavjud."
 msgstr "Есть проблема с ботом"
 
@@ -165,6 +165,22 @@ msgstr ""
 "Вы успешно зарегистрировались. ✅\n"
 "Мы свяжемся с вами в ближайшее время. 😊"
 
+#: handlers/users/admin_statistics.py:20
+#, fuzzy
+msgid ""
+"Iltimos, telefon raqamni kiriting.\n"
+"Namuna: +998999999999"
+msgstr "Пожалуйста, введите свой номер телефона."
+
+#: handlers/users/admin_statistics.py:39
+msgid "Foydalanuvchi topilmadi."
+msgstr ""
+
+#: handlers/users/admin_statistics.py:59
+#, fuzzy
+msgid "Bekor qilindi. ✅"
+msgstr "Сообщение было отменено."
+
 #: handlers/users/bot_settings.py:14 handlers/users/bot_settings.py:53
 msgid "Iltimos, o'zingizga qulay tilni tanlang 😊"
 msgstr "Пожалуйста, выберите предпочитаемый язык 😊"
@@ -185,16 +201,16 @@ msgid ""
 msgstr ""
 
 #: handlers/users/results.py:58
-msgid "Iltimos, o'zbek tili uchun natijaning rasmini kiriting."
-msgstr "Пожалуйста, введите изображение результата для узбекского языка."
+msgid "Iltimos, o'zbek tili uchun natijaning videosini kiriting."
+msgstr "Пожалуйста, введите видео результата для узбекского языка."
 
 #: handlers/users/results.py:69
-msgid "Iltimos, rus tili uchun natijaning rasmini kiriting."
-msgstr "Пожалуйста, введите изображение результата для русского языка."
+msgid "Iltimos, rus tili uchun natijaning videosini kiriting."
+msgstr "Пожалуйста, введите видео результата для русского языка."
 
 #: handlers/users/results.py:80
-msgid "Iltimos, ingliz tili uchun natijaning rasmini kiriting."
-msgstr "Пожалуйста, введите изображение результата для английского языка."
+msgid "Iltimos, ingliz tili uchun natijaning videosini kiriting."
+msgstr "Пожалуйста, введите видео результата для английского языка."
 
 #: handlers/users/results.py:91
 msgid "Iltimos, o'zbek tili uchun natijaning matnini kiriting."
@@ -402,21 +418,21 @@ msgstr "Назад ◀"
 msgid "Telefon raqamni jo'natish 📞"
 msgstr "Отправьте номер телефона 📞"
 
-#: keyboards/inline/admin_course.py:21 keyboards/inline/admins.py:124
-#: keyboards/inline/admins.py:180 keyboards/inline/admins.py:225
-#: keyboards/inline/admins.py:261 keyboards/inline/admins.py:297
+#: keyboards/inline/admin_course.py:21 keyboards/inline/admins.py:123
+#: keyboards/inline/admins.py:179 keyboards/inline/admins.py:224
+#: keyboards/inline/admins.py:260 keyboards/inline/admins.py:296
 msgid "Ruscha 🇷🇺"
 msgstr ""
 
-#: keyboards/inline/admin_course.py:24 keyboards/inline/admins.py:127
-#: keyboards/inline/admins.py:183 keyboards/inline/admins.py:227
-#: keyboards/inline/admins.py:263 keyboards/inline/admins.py:299
+#: keyboards/inline/admin_course.py:24 keyboards/inline/admins.py:126
+#: keyboards/inline/admins.py:182 keyboards/inline/admins.py:226
+#: keyboards/inline/admins.py:262 keyboards/inline/admins.py:298
 msgid "English 🇺🇸"
 msgstr ""
 
-#: keyboards/inline/admin_course.py:27 keyboards/inline/admins.py:130
-#: keyboards/inline/admins.py:186 keyboards/inline/admins.py:229
-#: keyboards/inline/admins.py:265 keyboards/inline/admins.py:301
+#: keyboards/inline/admin_course.py:27 keyboards/inline/admins.py:129
+#: keyboards/inline/admins.py:185 keyboards/inline/admins.py:228
+#: keyboards/inline/admins.py:264 keyboards/inline/admins.py:300
 msgid "O'zbek 🇺🇿"
 msgstr ""
 
@@ -424,9 +440,9 @@ msgstr ""
 msgid "Yangu kurs ➕"
 msgstr "Новый курс ➕"
 
-#: keyboards/inline/admin_course.py:33 keyboards/inline/admins.py:136
-#: keyboards/inline/admins.py:192 keyboards/inline/admins.py:220
-#: keyboards/inline/admins.py:256 keyboards/inline/admins.py:292
+#: keyboards/inline/admin_course.py:33 keyboards/inline/admins.py:135
+#: keyboards/inline/admins.py:191 keyboards/inline/admins.py:219
+#: keyboards/inline/admins.py:255 keyboards/inline/admins.py:291
 msgid "O'chirish 🗑"
 msgstr "Удалить 🗑"
 
@@ -435,13 +451,13 @@ msgid "Ro'yxatdan o'tganlar 👤"
 msgstr "Зарегистрированные люди 👤"
 
 #: keyboards/inline/admin_course.py:43 keyboards/inline/admin_course.py:79
-#: keyboards/inline/admins.py:141 keyboards/inline/admins.py:197
+#: keyboards/inline/admins.py:140 keyboards/inline/admins.py:196
 #: keyboards/inline/users.py:16 keyboards/inline/users.py:38
 msgid "⬅ Ortga"
 msgstr "⬅ Назад"
 
 #: keyboards/inline/admin_course.py:49 keyboards/inline/admin_course.py:85
-#: keyboards/inline/admins.py:147 keyboards/inline/admins.py:203
+#: keyboards/inline/admins.py:146 keyboards/inline/admins.py:202
 #: keyboards/inline/users.py:22 keyboards/inline/users.py:44
 msgid "Keyingi ➡"
 msgstr "Далее ➡"
@@ -474,37 +490,49 @@ msgstr "видео"
 msgid "Shunchaki matn"
 msgstr "Просто текст"
 
-#: keyboards/inline/admins.py:49 keyboards/inline/admins.py:62
-#: keyboards/inline/admins.py:77
+#: keyboards/inline/admins.py:49 keyboards/inline/admins.py:61
+#: keyboards/inline/admins.py:76
 msgid "Ha"
 msgstr "Да"
 
-#: keyboards/inline/admins.py:50 keyboards/inline/admins.py:63
-#: keyboards/inline/admins.py:79
+#: keyboards/inline/admins.py:50 keyboards/inline/admins.py:62
+#: keyboards/inline/admins.py:78
 msgid "Yo'q"
 msgstr "Нет"
 
-#: keyboards/inline/admins.py:104
+#: keyboards/inline/admins.py:103
 msgid "Yangi ustoz ➕"
 msgstr "Новый учитель ➕"
 
-#: keyboards/inline/admins.py:135
+#: keyboards/inline/admins.py:134
 #, fuzzy
 msgid "Yangi o'qituvchi ➕"
 msgstr "Новый учитель ➕"
 
-#: keyboards/inline/admins.py:160 keyboards/inline/admins.py:191
+#: keyboards/inline/admins.py:159 keyboards/inline/admins.py:190
 msgid "Yangi natija ➕"
 msgstr "Новый результат ➕"
 
-#: keyboards/inline/admins.py:241 keyboards/inline/admins.py:277
-#: keyboards/inline/admins.py:313
+#: keyboards/inline/admins.py:240 keyboards/inline/admins.py:276
+#: keyboards/inline/admins.py:312
 msgid "Ma'lumot qo'shish ➕"
 msgstr "Добавьте информацию ➕"
 
-#: keyboards/inline/admins.py:324
+#: keyboards/inline/admins.py:323
 msgid "Excel olish (ro'yxatdan o'tganlar)"
 msgstr "Получить Excel (зарегистрировано)"
+
+#: keyboards/inline/admins.py:324
+msgid "Delete user by phone"
+msgstr ""
+
+#: keyboards/inline/admins.py:335
+msgid "Delete 🗑"
+msgstr ""
+
+#: keyboards/inline/admins.py:336
+msgid "Cancel ❌"
+msgstr ""
 
 #: keyboards/inline/locations.py:10
 msgid "Andijon"

@@ -21,7 +21,7 @@ async def admin_get_results(message: types):
     if results:
         lang = user['language']
         for result in results:
-            await message.answer_photo(
+            await message.answer_video(
                 result[f'image_{lang}'], caption=result[f'info_{lang}'],
                 reply_markup=await admin_results_def(lang, result['id'], 1)
             )
@@ -43,7 +43,7 @@ async def delete_result_function(call: CallbackQuery, callback_data: dict):
         if results:
             await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
             for result in results:
-                await call.message.answer_photo(
+                await call.message.answer_video(
                     result[f'image_{lang}'], caption=result[f'info_{lang}'],
                     reply_markup=await admin_results_def(lang, result['id'], 1)
                 )
@@ -55,37 +55,37 @@ async def delete_result_function(call: CallbackQuery, callback_data: dict):
 
 @dp.callback_query_handler(text="add_result", chat_id=config.ADMINS)
 async def admin_add_result(call: CallbackQuery):
-    text = _("Iltimos, o'zbek tili uchun natijaning rasmini kiriting.")
+    text = _("Iltimos, o'zbek tili uchun natijaning videosini kiriting.")
     await call.message.answer(text, reply_markup=await back_admin_main_menu())
     await AddResult.image_uz.set()
 
 
-@dp.message_handler(state=AddResult.image_uz, chat_id=config.ADMINS, content_types=types.ContentTypes.PHOTO)
+@dp.message_handler(state=AddResult.image_uz, chat_id=config.ADMINS, content_types=types.ContentTypes.VIDEO)
 async def result_image_uz(message: types.Message, state: FSMContext):
     await state.update_data({
-        "image_uz": message.photo[-1].file_id
+        "image_uz": message.video.file_id
     })
 
-    text = _("Iltimos, rus tili uchun natijaning rasmini kiriting.")
+    text = _("Iltimos, rus tili uchun natijaning videosini kiriting.")
     await message.answer(text, reply_markup=await back_admin_main_menu())
     await AddResult.image_ru.set()
 
 
-@dp.message_handler(state=AddResult.image_ru, chat_id=config.ADMINS, content_types=types.ContentTypes.PHOTO)
+@dp.message_handler(state=AddResult.image_ru, chat_id=config.ADMINS, content_types=types.ContentTypes.VIDEO)
 async def result_image_ru(message: types.Message, state: FSMContext):
     await state.update_data({
-        "image_ru": message.photo[-1].file_id
+        "image_ru": message.video.file_id
     })
 
-    text = _("Iltimos, ingliz tili uchun natijaning rasmini kiriting.")
+    text = _("Iltimos, ingliz tili uchun natijaning videosini kiriting.")
     await message.answer(text, reply_markup=await back_admin_main_menu())
     await AddResult.image_en.set()
 
 
-@dp.message_handler(state=AddResult.image_en, chat_id=config.ADMINS, content_types=types.ContentTypes.PHOTO)
+@dp.message_handler(state=AddResult.image_en, chat_id=config.ADMINS, content_types=types.ContentTypes.VIDEO)
 async def course_image_en(message: types.Message, state: FSMContext):
     await state.update_data({
-        "image_en": message.photo[-1].file_id
+        "image_en": message.video.file_id
     })
 
     text = _("Iltimos, o'zbek tili uchun natijaning matnini kiriting.")
@@ -139,7 +139,7 @@ async def function_result(call: CallbackQuery, callback_data: dict):
     result = await get_result(result_id)
 
     if result:
-        await call.message.answer_photo(
+        await call.message.answer_video(
             result[f'image_{lang}'], caption=result[f"info_{lang}"],
             reply_markup=await admin_results_def(lang, result_id, page)
         )
@@ -165,7 +165,7 @@ async def next_result(call: CallbackQuery, callback_data: dict):
 
     if results_list:
         result = results_list[0]
-        await call.message.answer_photo(
+        await call.message.answer_video(
             result[f'image_{lang}'], caption=result[f"info_{lang}"],
             reply_markup=await admin_results_def(lang, result['id'], new_page + 1)
         )
@@ -192,7 +192,7 @@ async def next_course(call: CallbackQuery, callback_data: dict):
 
     if results_list:
         result = results_list[0]
-        await call.message.answer_photo(
+        await call.message.answer_video(
             result[f'image_{lang}'], caption=result[f"info_{lang}"],
             reply_markup=await admin_results_def(lang, result['id'], new_page - 1)
         )
@@ -212,7 +212,7 @@ async def admin_results(message: types.Message):
     if results:
         lang = user['language']
         for result in results:
-            await message.answer_photo(
+            await message.answer_video(
                 result[f'image_{lang}'], caption=result[f'info_{lang}'],
                 reply_markup=await user_results_def(lang, result['id'], 1)
             )
@@ -238,7 +238,7 @@ async def next_result(call: CallbackQuery, callback_data: dict):
 
     if results_list:
         result = results_list[0]
-        await call.message.answer_photo(
+        await call.message.answer_video(
             result[f'image_{lang}'], caption=result[f"info_{lang}"],
             reply_markup=await user_results_def(lang, result['id'], new_page + 1)
         )
@@ -265,7 +265,7 @@ async def back_result(call: CallbackQuery, callback_data: dict):
 
     if results_list:
         result = results_list[0]
-        await call.message.answer_photo(
+        await call.message.answer_video(
             result[f'image_{lang}'], caption=result[f"info_{lang}"],
             reply_markup=await user_results_def(lang, result['id'], new_page - 1)
         )
