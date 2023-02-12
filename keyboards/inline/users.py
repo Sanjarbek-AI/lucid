@@ -50,26 +50,35 @@ async def user_results_def(lang, result_id, page):
     return results_user
 
 
-video_1 = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text=_("Keyingi video ➡"), callback_data="video_1")
+async def video_1_def():
+    video_1 = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=_("Keyingi video ➡"), callback_data="video_1")
+            ]
         ]
-    ]
-)
-video_2 = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text=_("Keyingi video ➡"), callback_data="video_2")
-        ]
-    ]
-)
+    )
+    return video_1
 
 
-register_start_video = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text="Ro'yxatdan o'tish 😊 ", callback_data="register_start_video")
+async def video_2_def():
+    video_2 = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=_("Keyingi video ➡"), callback_data="video_2")
+            ]
         ]
-    ]
-)
+    )
+
+    return video_2
+
+
+async def register_start_video_def():
+    register_start_video = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=_("Ro'yxatdan o'tish 😊 "), callback_data="register_start_video")
+            ]
+        ]
+    )
+    return register_start_video

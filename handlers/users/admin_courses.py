@@ -1,64 +1,72 @@
 from aiogram import types
-from aiogram.types import InputFile
 from aiogram.dispatcher.storage import FSMContext
+from aiogram.types import InputFile
 from aiogram.types.callback_query import CallbackQuery
 
 from filters.private_chat import IsPrivate
 from handlers.users.excel_users import export_users_registered
-from keyboards.default.admins import back_admin_main_menu, admin_main_menu
-from keyboards.default.users import users_main_menu
-from keyboards.inline.admin_course import admin_course_def, add_course_def, admin_course_filter, course_delete, \
-    course_pagination_next, course_pagination_back, users_course_def, admin_registered_to_course, course_enrolling
+from keyboards.default.admins import back_admin_main_menu, admin_main_menu, admin_course_def_new
+from keyboards.default.users import user_course_def_new, users_main_menu
+from keyboards.inline.admin_course import admin_course_def, admin_course_filter, course_delete, course_enrolling, \
+    register_course, registered_to_course_callback
 from loader import dp, _, bot
 from main import config
-from states.admins import AddCourse
-from utils.db_api.commands import get_user, get_courses, add_course, get_course, delete_course, register_to_course, \
-    check_user_register, get_registered_users
+from states.admins import AddCourse, Menu
+from utils.db_api.commands import get_user, get_courses, add_course, get_course_by_button, get_course, delete_course, \
+    get_registered_users, check_user_register, register_to_course
 
 
 @dp.message_handler(IsPrivate(), text=['Kurslar 🎯', 'Courses 🎯', "Курсы 🎯"], chat_id=config.ADMINS)
 async def admin_get_courses(message: types):
+    await Menu.course.set()
     courses = await get_courses()
     user = await get_user(message.from_user.id)
+    lang = user['language']
     if courses:
-        lang = user['language']
-        for course in courses:
-            await message.answer_photo(
-                course[f'image_{lang}'], caption=course[f'info_{lang}'],
-                reply_markup=await admin_course_def(lang, course['id'], 1)
-            )
-            break
+        text = _("Kurslar menyusi, kerakli kursni tanlang.")
+        await message.answer(text=text, reply_markup=await admin_course_def_new(lang))
     else:
         text = _("Hozirda kurslar mavjud emas, yangi kurs qo'shish uchun pastdagi tugmadan foydalaning.")
-        await message.answer(text, reply_markup=await add_course_def())
+        await message.answer(text, reply_markup=await admin_course_def_new(lang))
 
 
-@dp.callback_query_handler(course_delete.filter(act="delete_course"), chat_id=config.ADMINS)
-async def delete_courses(call: CallbackQuery, callback_data: dict):
-    lang = callback_data.get("lang")
-    course_id = callback_data.get("course_id")
-
-    if await delete_course(int(course_id)):
-        text = _("Kurs o'chirildi. ✅")
-        await call.message.answer(text)
-        courses = await get_courses()
-        if courses:
-            await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
-            for course in courses:
-                await call.message.answer_photo(
-                    course[f'image_{lang}'], caption=course[f'info_{lang}'],
-                    reply_markup=await admin_course_def(lang, course['id'], 1)
-                )
-                break
-    else:
-        text = _("Did not added. Bot has some problem.")
-        await call.message.answer(text, reply_markup=await admin_main_menu())
+@dp.message_handler(text=["Yangi kurs ➕", "Новый курс ➕", "New course ➕"], chat_id=config.ADMINS, state=Menu.course)
+async def admin_add_course(message: types.Message):
+    text = _("Iltimos, o'zbek tili uchun kurs nomini kiriting.")
+    await message.answer(text, reply_markup=await back_admin_main_menu())
+    await AddCourse.button_uz.set()
 
 
-@dp.callback_query_handler(text="add_course", chat_id=config.ADMINS)
-async def admin_add_course(call: CallbackQuery):
+@dp.message_handler(state=AddCourse.button_uz, chat_id=config.ADMINS)
+async def course_button_uz(message: types.Message, state: FSMContext):
+    await state.update_data({
+        "button_uz": message.text
+    })
+
+    text = _("Iltimos, rus tili uchun kurs nomini kiriting.")
+    await message.answer(text, reply_markup=await back_admin_main_menu())
+    await AddCourse.button_ru.set()
+
+
+@dp.message_handler(state=AddCourse.button_ru, chat_id=config.ADMINS)
+async def course_button_uz(message: types.Message, state: FSMContext):
+    await state.update_data({
+        "button_ru": message.text
+    })
+
+    text = _("Iltimos, ingliz tili uchun kurs nomini kiriting.")
+    await message.answer(text, reply_markup=await back_admin_main_menu())
+    await AddCourse.button_en.set()
+
+
+@dp.message_handler(state=AddCourse.button_en, chat_id=config.ADMINS)
+async def course_button_uz(message: types.Message, state: FSMContext):
+    await state.update_data({
+        "button_en": message.text
+    })
+
     text = _("Iltimos, o'zbek tili uchun kurs rasmini kiriting.")
-    await call.message.answer(text, reply_markup=await back_admin_main_menu())
+    await message.answer(text, reply_markup=await back_admin_main_menu())
     await AddCourse.image_uz.set()
 
 
@@ -131,11 +139,10 @@ async def course_text_en(message: types.Message, state: FSMContext):
     await state.finish()
 
 
-@dp.callback_query_handler(admin_course_filter.filter(act="admin_course"), chat_id=config.ADMINS)
+@dp.callback_query_handler(admin_course_filter.filter(act="admin_course"), chat_id=config.ADMINS, state=Menu.course_in)
 async def change_language(call: CallbackQuery, callback_data: dict):
     lang = callback_data.get("lang")
     course_id = int(callback_data.get("course_id"))
-    page = int(callback_data.get("page"))
 
     await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
     course = await get_course(course_id)
@@ -143,70 +150,32 @@ async def change_language(call: CallbackQuery, callback_data: dict):
     if course:
         await call.message.answer_photo(
             course[f'image_{lang}'], caption=course[f"info_{lang}"],
-            reply_markup=await admin_course_def(lang, course_id, page)
+            reply_markup=await admin_course_def(lang, course_id)
         )
+    else:
+        text = _("Botda muommo mavjud.")
+        await call.message.answer(text, reply_markup=await admin_main_menu())
+
+
+@dp.callback_query_handler(course_delete.filter(act="delete_course"), chat_id=config.ADMINS, state=Menu.course_in)
+async def delete_courses(call: CallbackQuery, callback_data: dict):
+    user = await get_user(call.message.chat.id)
+    lang = user['language']
+    course_id = callback_data.get("course_id")
+
+    if await delete_course(int(course_id)):
+        await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
+        text = _("Kurs o'chirildi. ✅\nKurslar menyusi, kerakli kursni tanlang.")
+        await call.message.answer(text=text, reply_markup=await admin_course_def_new(lang))
 
     else:
         text = _("Botda muommo mavjud.")
         await call.message.answer(text, reply_markup=await admin_main_menu())
 
 
-@dp.callback_query_handler(course_pagination_next.filter(act="next_course"), chat_id=config.ADMINS)
-async def next_course(call: CallbackQuery, callback_data: dict):
-    lang = callback_data.get("lang")
-    course_id = callback_data.get("course_id")
-    page = int(callback_data.get("page"))
-
-    await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
-    courses = await get_courses()
-
-    new_page = page
-
-    if page >= len(courses) - 1:
-        new_page = (page % len(courses))
-    course_list = courses[new_page:new_page + 1]
-
-    if course_list:
-        course = course_list[0]
-        await call.message.answer_photo(
-            course[f'image_{lang}'], caption=course[f"info_{lang}"],
-            reply_markup=await admin_course_def(lang, course['id'], new_page + 1)
-        )
-    else:
-        text = _("Bot has some problems.")
-        await call.message.answer(text, reply_markup=await admin_main_menu())
-
-
-@dp.callback_query_handler(course_pagination_back.filter(act="back_course"), chat_id=config.ADMINS)
-async def next_course(call: CallbackQuery, callback_data: dict):
-    lang = callback_data.get("lang")
-    course_id = callback_data.get("course_id")
-    page = int(callback_data.get("page"))
-
-    await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
-    courses = await get_courses()
-
-    new_page = page
-    course_list = list()
-    if page == 1:
-        course_list = courses[-1:]
-        new_page = len(courses) + 1
-    elif 1 < page <= len(courses):
-        course_list = courses[new_page - 2:new_page - 1]
-
-    if course_list:
-        course = course_list[0]
-        await call.message.answer_photo(
-            course[f'image_{lang}'], caption=course[f"info_{lang}"],
-            reply_markup=await admin_course_def(lang, course['id'], new_page - 1)
-        )
-    else:
-        text = _("Bot has some problems.")
-        await call.message.answer(text, reply_markup=await admin_main_menu())
-
-
-@dp.callback_query_handler(admin_registered_to_course.filter(act="registered_to_course"), chat_id=config.ADMINS)
-async def user_register_to_course(call: CallbackQuery, callback_data: dict, state: FSMContext):
+@dp.callback_query_handler(registered_to_course_callback.filter(act="registered_to_course"), chat_id=config.ADMINS,
+                           state=Menu.course_in)
+async def user_register_to_course(call: CallbackQuery, callback_data: dict):
     course_id = callback_data.get("course_id")
     users_list = await get_registered_users(int(course_id))
     if users_list:
@@ -222,80 +191,39 @@ async def user_register_to_course(call: CallbackQuery, callback_data: dict, stat
         await call.message.reply_document(export_file)
 
 
-##############################################################################################################
-##############################################################################################################
+@dp.message_handler(IsPrivate(), chat_id=config.ADMINS, state=Menu.course)
+async def admin_get_courses(message: types):
+    await Menu.course_in.set()
+    user = await get_user(message.from_user.id)
+    lang = user['language']
+    course = await get_course_by_button(message.text)
+
+    if course:
+        await message.answer_photo(course[f'image_{lang}'], caption=course[f'info_{lang}'],
+                                   reply_markup=await admin_course_def(lang, course['id']))
+    else:
+        text = _("Bunday nomdagi kurs mavjud emas !")
+        await message.answer(text, reply_markup=await admin_course_def_new(lang))
 
 
-@dp.message_handler(text=['Courses 🎯', "Kurslar 🎯", 'Курсы 🎯'])
-async def admin_courses(message: types.Message):
+# ##############################################################################################################
+# ##############################################################################################################
+
+@dp.message_handler(IsPrivate(), text=['Kurslar 🎯', 'Courses 🎯', "Курсы 🎯"])
+async def users_get_courses(message: types):
+    await Menu.course_in.set()
     courses = await get_courses()
     user = await get_user(message.from_user.id)
+    lang = user['language']
     if courses:
-        lang = user['language']
-        for course in courses:
-            await message.answer_photo(
-                course[f'image_{lang}'], caption=course[f'info_{lang}'],
-                reply_markup=await users_course_def(lang, course['id'], 1)
-            )
-            break
+        text = _("Kurslar menyusi, kerakli kursni tanlang.")
+        await message.answer(text=text, reply_markup=await user_course_def_new(lang))
     else:
-        text = _("Hozirda faol kurslar mavjud emas.")
+        text = _("Hozirda kurslar mavjud emas.")
         await message.answer(text, reply_markup=await users_main_menu())
 
 
-@dp.callback_query_handler(course_pagination_next.filter(act="next_course"))
-async def next_course(call: CallbackQuery, callback_data: dict):
-    lang = callback_data.get("lang")
-    page = int(callback_data.get("page"))
-
-    await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
-    courses = await get_courses()
-
-    new_page = page
-
-    if page >= len(courses) - 1:
-        new_page = (page % len(courses))
-    course_list = courses[new_page:new_page + 1]
-
-    if course_list:
-        course = course_list[0]
-        await call.message.answer_photo(
-            course[f'image_{lang}'], caption=course[f"info_{lang}"],
-            reply_markup=await users_course_def(lang, course['id'], new_page + 1)
-        )
-    else:
-        text = _("Botda muommo mavjud.")
-        await call.message.answer(text, reply_markup=await users_main_menu())
-
-
-@dp.callback_query_handler(course_pagination_back.filter(act="back_course"))
-async def next_course(call: CallbackQuery, callback_data: dict):
-    lang = callback_data.get("lang")
-    page = int(callback_data.get("page"))
-
-    await bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
-    courses = await get_courses()
-
-    new_page = page
-    course_list = list()
-    if page == 1:
-        course_list = courses[-1:]
-        new_page = len(courses) + 1
-    elif 1 < page <= len(courses):
-        course_list = courses[new_page - 2:new_page - 1]
-
-    if course_list:
-        course = course_list[0]
-        await call.message.answer_photo(
-            course[f'image_{lang}'], caption=course[f"info_{lang}"],
-            reply_markup=await users_course_def(lang, course['id'], new_page - 1)
-        )
-    else:
-        text = _("Botda muommo mavjud.")
-        await call.message.answer(text, reply_markup=await users_main_menu())
-
-
-@dp.callback_query_handler(course_enrolling.filter(act="register_to_course"))
+@dp.callback_query_handler(course_enrolling.filter(act="register_to_course"), state=Menu.course_in)
 async def user_register_to_course(call: CallbackQuery, callback_data: dict, state: FSMContext):
     course_id = callback_data.get("course_id")
 
@@ -315,3 +243,18 @@ async def user_register_to_course(call: CallbackQuery, callback_data: dict, stat
 
         await state.finish()
         await call.message.answer(text, reply_markup=await users_main_menu())
+
+
+@dp.message_handler(IsPrivate(), state=Menu.course_in)
+async def user_get_courses(message: types):
+    await Menu.course_in.set()
+    user = await get_user(message.from_user.id)
+    lang = user['language']
+    course = await get_course_by_button(message.text)
+
+    if course:
+        await message.answer_photo(course[f'image_{lang}'], caption=course[f'info_{lang}'],
+                                   reply_markup=await register_course(course['id']))
+    else:
+        text = _("Bunday nomdagi kurs mavjud emas !")
+        await message.answer(text, reply_markup=await user_course_def_new(lang))

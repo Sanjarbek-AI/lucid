@@ -8,12 +8,13 @@ from keyboards.default.admins import contact_def, admin_main_menu
 from keyboards.default.users import users_main_menu
 from keyboards.inline.admins import languages
 from keyboards.inline.locations import locations_def
-from keyboards.inline.users import register_start_video, video_1, video_2
+from keyboards.inline.users import video_1_def, video_2_def, register_start_video_def
 from loader import dp, _, bot
 from main import config
 from states.users import Register
 from utils.db_api.commands import register, get_user_active, update_user, register_video_start, update_user_language
 
+fake_id = "BAACAgIAAxkBAAIG0GPoh7gOPRnQxNF3VJLc4Ak6K3B1AAJSJgACvIVBS8nArIXi3s1QLgQ"
 
 # @dp.message_handler(state="*", chat_id=config.ADMINS, content_types=types.ContentTypes.VIDEO)
 # async def course_image_en(message: types.Message):
@@ -56,6 +57,7 @@ async def start_users(message: types.Message):
 
 @dp.callback_query_handler(state=Register.language)
 async def language(call: CallbackQuery, state: FSMContext):
+
     await state.update_data({
         "language": call.data,
     })
@@ -72,7 +74,8 @@ async def language(call: CallbackQuery, state: FSMContext):
     caption = _("Assalomu alaykum, videoni ko'ring va ajoyib ma'lumotlarga ega bo'ling 😃", locale=call.data)
 
     await Register.video_1.set()
-    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption, reply_markup=video_1)
+    await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
+                         reply_markup=await video_1_def())
 
 
 @dp.callback_query_handler(text="video_1", state=Register.video_1)
@@ -81,7 +84,7 @@ async def video_2_func(call: CallbackQuery):
     caption = _("Albatta siz uchun foydali bo'ladi. 🤩")
     await Register.video_2.set()
     await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
-                         reply_markup=video_2)
+                         reply_markup=await video_2_def())
 
 
 @dp.callback_query_handler(text="video_2", state=Register.video_2)
@@ -90,7 +93,7 @@ async def video_3_func(call: CallbackQuery):
     caption = _("Video orqali ko'plab foydali ma'lumotlarga ega bo'ling. 😍")
     await Register.register.set()
     await bot.send_video(chat_id=call.message.chat.id, video=file_id, caption=caption,
-                         reply_markup=register_start_video)
+                         reply_markup=await register_start_video_def())
 
 
 @dp.callback_query_handler(text="register_start_video", state=Register.register)

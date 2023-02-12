@@ -1,22 +1,49 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 from loader import _
+from utils.db_api.commands import get_courses, get_advantages
+
+
+async def admin_course_def_new(lang):
+    courses = await get_courses()
+
+    courses_admin = ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    if courses:
+        for course in courses:
+            courses_admin.insert(course[f'button_{lang}'])
+
+    courses_admin.insert(_("Yangi kurs ➕"))
+    courses_admin.insert(_("Asosiy menyu ◀"))
+    return courses_admin
+
+
+async def admin_advantage_def_new(lang):
+    advantages = await get_advantages()
+
+    advantages_keyboard = ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    if advantages:
+        for course in advantages:
+            advantages_keyboard.insert(course[f'button_{lang}'])
+
+    advantages_keyboard.insert(_("Afzallik qo'shish ➕"))
+    advantages_keyboard.insert(_("Asosiy menyu ◀"))
+    return advantages_keyboard
 
 
 async def admin_main_menu():
     admin_menu = ReplyKeyboardMarkup(
         keyboard=[
             [
-                KeyboardButton(text=_("Kurslar 🎯")),
+                KeyboardButton(text=_("Biz haqimizda ℹ")),
                 KeyboardButton(text=_("O'qituvchilar 👨‍🏫"))
             ],
             [
-                KeyboardButton(text=_("Natijalar 🎖")),
+                KeyboardButton(text=_("Kurslar 🎯")),
                 KeyboardButton(text=_("Afzalliklar ⭐"))
             ],
             [
+                KeyboardButton(text=_("Natijalar 🎖")),
                 KeyboardButton(text=_("Aloqa ☎")),
-                KeyboardButton(text=_("Ma'lumot ℹ"))
             ],
             [
                 KeyboardButton(text=_("Statistika 📈")),

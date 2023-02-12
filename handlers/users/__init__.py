@@ -1,3 +1,4 @@
+from . import admin_backs
 from . import bot_settings
 from . import advantage
 from . import about
@@ -7,6 +8,5 @@ from . import teachers
 from . import admin_courses
 from . import admin_statistics
 from . import select_language
-from . import admin_backs
 from . import send_post
 from . import start

@@ -166,6 +166,7 @@ async def add_result_def():
 admin_result_filter = CallbackData("admin_result", "act", "lang", "result_id", "page")
 result_pagination_next = CallbackData("next_result", "act", "lang", "result_id", "page")
 result_pagination_back = CallbackData("back_result", "act", "lang", "result_id", "page")
+
 result_delete = CallbackData("delete_result", "act", "lang", "result_id", "page")
 
 
@@ -288,28 +289,17 @@ async def advantage_admin_def(lang, advantage_id):
     add_advantage = InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(text=_("O'chirish 🗑"),
-                                     callback_data=advantage_delete.new(act="delete_information", lang=lang,
-                                                                        advantage_id=advantage_id))
-            ],
-            [
                 InlineKeyboardButton(text=_("Ruscha 🇷🇺"),
                                      callback_data=admin_advantage_filter.new(act="admin_advantage", lang="ru")),
                 InlineKeyboardButton(text=_("English 🇺🇸"),
                                      callback_data=admin_advantage_filter.new(act="admin_advantage", lang="en")),
                 InlineKeyboardButton(text=_("O'zbek 🇺🇿"),
                                      callback_data=admin_advantage_filter.new(act="admin_advantage", lang="uz"))
-            ]
-        ]
-    )
-    return add_advantage
-
-
-async def add_advantage_def():
-    add_advantage = InlineKeyboardMarkup(
-        inline_keyboard=[
+            ],
             [
-                InlineKeyboardButton(text=_("Ma'lumot qo'shish ➕"), callback_data="add_advantage"),
+                InlineKeyboardButton(text=_("O'chirish 🗑"),
+                                     callback_data=advantage_delete.new(act="delete_advantage", lang=lang,
+                                                                        advantage_id=advantage_id))
             ]
         ]
     )
@@ -320,8 +310,10 @@ async def export_excel_users():
     users_excel = InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(text=_("Excel olish (ro'yxatdan o'tganlar)"), callback_data="registered_users"),
-                InlineKeyboardButton(text=_("Delete user by phone"), callback_data="delete_user_by_phone"),
+                InlineKeyboardButton(text=_("Foydalanuvchini qidirish"), callback_data="delete_user_by_phone"),
+            ],
+            [
+                InlineKeyboardButton(text=_("Telefon raqam orqali qidirish"), callback_data="delete_user_by_phone"),
             ]
         ]
     )
@@ -332,8 +324,8 @@ async def admin_delete_user():
     delete = InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(text=_("Delete 🗑"), callback_data="user_delete_yes"),
-                InlineKeyboardButton(text=_("Cancel ❌"), callback_data="user_delete_no"),
+                InlineKeyboardButton(text=_("O'chirish 🗑"), callback_data="user_delete_yes"),
+                InlineKeyboardButton(text=_("Bekor qilish ❌"), callback_data="user_delete_no"),
             ]
         ]
     )

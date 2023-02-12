@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-02-08 16:32+0500\n"
+"POT-Creation-Date: 2023-02-12 12:12+0500\n"
 "PO-Revision-Date: 2022-12-31 09:21+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,75 +18,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: handlers/users/about.py:27 handlers/users/advantage.py:26
+#: handlers/users/about.py:27 handlers/users/advantage.py:25
 #: handlers/users/contact.py:26 handlers/users/results.py:30
 msgid "Ma'lumot mavjud emas, qo'shish uchun pastdagi tugmadan foydalaning."
 msgstr "Not data, to add new data, use button below."
 
-#: handlers/users/about.py:33 handlers/users/advantage.py:32
-#: handlers/users/contact.py:32
+#: handlers/users/about.py:33 handlers/users/contact.py:32
 msgid "Iltimos, o'zbek tili uchun rasmni kiriting."
 msgstr "Please, enter image for uzbek language."
 
-#: handlers/users/about.py:44 handlers/users/advantage.py:43
-#: handlers/users/contact.py:43
+#: handlers/users/about.py:44 handlers/users/contact.py:43
 msgid "Iltimos, rus tili uchun rasmni kiriting."
 msgstr "Please, enter image for russian language."
 
-#: handlers/users/about.py:55 handlers/users/advantage.py:54
-#: handlers/users/contact.py:54
+#: handlers/users/about.py:55 handlers/users/contact.py:54
 msgid "Iltimos, ingliz tili uchun rasmni kiriting."
 msgstr "Please, enter image for english language."
 
-#: handlers/users/about.py:66 handlers/users/advantage.py:65
-#: handlers/users/contact.py:65
+#: handlers/users/about.py:66 handlers/users/advantage.py:120
+#: handlers/users/advantage.py:131 handlers/users/contact.py:65
 msgid "Iltimos, o'zbek tili uchun matnli ma'lumotni kiriting."
 msgstr "Please, enter text for uzbek language."
 
-#: handlers/users/about.py:77 handlers/users/advantage.py:76
+#: handlers/users/about.py:77 handlers/users/advantage.py:142
 #: handlers/users/contact.py:76
 msgid "Iltimos, rus tili uchun matnli ma'lumotni kiriting."
 msgstr "Please, enter text for russian language."
 
-#: handlers/users/about.py:88 handlers/users/advantage.py:87
+#: handlers/users/about.py:88 handlers/users/advantage.py:153
 #: handlers/users/contact.py:87
 msgid "Iltimos, ingliz tili uchun matnli ma'lumotni kiriting"
 msgstr "Please, enter text for english language."
 
-#: handlers/users/about.py:100 handlers/users/advantage.py:99
+#: handlers/users/about.py:100 handlers/users/advantage.py:165
 #: handlers/users/contact.py:99 handlers/users/results.py:125
 msgid "Ma'lumot muvofaqqiyatli qo'shildi. ✅"
 msgstr "Data successfully added. ✅"
 
-#: handlers/users/about.py:102 handlers/users/advantage.py:101
+#: handlers/users/about.py:102 handlers/users/advantage.py:167
 #: handlers/users/contact.py:101 handlers/users/results.py:127
 #: handlers/users/teachers.py:127
 msgid "Ma'lumot qo'shilmadi. Botda muommo mavjud."
 msgstr "Data did not added. Bot has some problem."
 
 #: handlers/users/about.py:124 handlers/users/admin_statistics.py:49
-#: handlers/users/advantage.py:123 handlers/users/contact.py:123
-#: handlers/users/results.py:40 handlers/users/teachers.py:40
+#: handlers/users/contact.py:123 handlers/users/results.py:40
+#: handlers/users/teachers.py:40
 msgid "Ma'lumot o'chirildi. ✅"
 msgstr "Data is deleted. ✅"
 
-#: handlers/users/about.py:126 handlers/users/admin_courses.py:150
-#: handlers/users/admin_courses.py:267 handlers/users/admin_courses.py:294
-#: handlers/users/admin_courses.py:314 handlers/users/admin_statistics.py:51
-#: handlers/users/advantage.py:125 handlers/users/bot_settings.py:23
-#: handlers/users/bot_settings.py:33 handlers/users/bot_settings.py:43
-#: handlers/users/bot_settings.py:62 handlers/users/bot_settings.py:72
-#: handlers/users/bot_settings.py:82 handlers/users/contact.py:125
-#: handlers/users/results.py:52 handlers/users/results.py:148
-#: handlers/users/results.py:173 handlers/users/results.py:200
-#: handlers/users/results.py:246 handlers/users/results.py:273
-#: handlers/users/teachers.py:52 handlers/users/teachers.py:148
-#: handlers/users/teachers.py:173 handlers/users/teachers.py:200
-#: handlers/users/teachers.py:246 handlers/users/teachers.py:273
+#: handlers/users/about.py:126 handlers/users/admin_courses.py:156
+#: handlers/users/admin_courses.py:172 handlers/users/admin_courses.py:242
+#: handlers/users/admin_statistics.py:51 handlers/users/advantage.py:200
+#: handlers/users/bot_settings.py:23 handlers/users/bot_settings.py:33
+#: handlers/users/bot_settings.py:43 handlers/users/bot_settings.py:62
+#: handlers/users/bot_settings.py:72 handlers/users/bot_settings.py:82
+#: handlers/users/contact.py:125 handlers/users/results.py:52
+#: handlers/users/results.py:148 handlers/users/results.py:173
+#: handlers/users/results.py:200 handlers/users/results.py:246
+#: handlers/users/results.py:273 handlers/users/teachers.py:52
+#: handlers/users/teachers.py:148 handlers/users/teachers.py:173
+#: handlers/users/teachers.py:200 handlers/users/teachers.py:246
+#: handlers/users/teachers.py:273
 msgid "Botda muommo mavjud."
 msgstr "Bot has some problem."
 
-#: handlers/users/about.py:145 handlers/users/advantage.py:144
+#: handlers/users/about.py:145 handlers/users/advantage.py:238
 #: handlers/users/contact.py:144 handlers/users/results.py:221
 #: handlers/users/teachers.py:221
 msgid "Ma'lumot mavjud emas."
@@ -96,65 +93,81 @@ msgstr "Data is not exit."
 msgid "Asosiy menyu."
 msgstr "Main menu"
 
-#: handlers/users/admin_courses.py:32
+#: handlers/users/admin_courses.py:26 handlers/users/admin_courses.py:219
+msgid "Kurslar menyusi, kerakli kursni tanlang."
+msgstr "Courses menu, select the desired course."
+
+#: handlers/users/admin_courses.py:29
 msgid ""
 "Hozirda kurslar mavjud emas, yangi kurs qo'shish uchun pastdagi tugmadan "
 "foydalaning."
 msgstr "Not data, to add new data, use button below."
 
-#: handlers/users/admin_courses.py:42
-msgid "Kurs o'chirildi. ✅"
-msgstr "Data is deleted. ✅"
+#: handlers/users/admin_courses.py:35
+msgid "Iltimos, o'zbek tili uchun kurs nomini kiriting."
+msgstr "Please, enter course name for uzbek language."
 
-#: handlers/users/admin_courses.py:54
-msgid "Did not added. Bot has some problem."
-msgstr ""
+#: handlers/users/admin_courses.py:46
+msgid "Iltimos, rus tili uchun kurs nomini kiriting."
+msgstr "Please, enter course name for russian language."
 
-#: handlers/users/admin_courses.py:60
+#: handlers/users/admin_courses.py:57
+msgid "Iltimos, ingliz tili uchun kurs nomini kiriting."
+msgstr "Please, enter course name for english language."
+
+#: handlers/users/admin_courses.py:68
 msgid "Iltimos, o'zbek tili uchun kurs rasmini kiriting."
 msgstr "Please, enter image for uzbek language."
 
-#: handlers/users/admin_courses.py:71
+#: handlers/users/admin_courses.py:79
 msgid "Iltimos, rus tili uchun kurs rasmini kiriting."
 msgstr "Please, enter image for russian language."
 
-#: handlers/users/admin_courses.py:82
+#: handlers/users/admin_courses.py:90
 msgid "Iltimos, ingliz tili uchun kurs rasmini kiriting."
 msgstr "Please, enter image for english language."
 
-#: handlers/users/admin_courses.py:93
+#: handlers/users/admin_courses.py:101
 msgid "Iltimos, o'zbek tili uchun kurs matnini kiriting."
 msgstr "Please, enter text for uzbek language."
 
-#: handlers/users/admin_courses.py:104
+#: handlers/users/admin_courses.py:112
 msgid "Iltimos, rus tili uchun kurs matnini kiriting."
 msgstr "Please, enter text for russian language."
 
-#: handlers/users/admin_courses.py:115
+#: handlers/users/admin_courses.py:123
 msgid "Iltimos, ingliz tili uchun kurs matnini kiriting."
 msgstr "Please, enter text for english language."
 
-#: handlers/users/admin_courses.py:127
+#: handlers/users/admin_courses.py:135
 msgid "Kurs muvofaqqiyatli qo'shildi. ✅"
 msgstr "Data successfully added. ✅"
 
-#: handlers/users/admin_courses.py:129
+#: handlers/users/admin_courses.py:137
 msgid "Kurs qo'shilmadi. Botda qandaydir muommo mavjud."
 msgstr "Data did not added. Bot has some problem."
 
-#: handlers/users/admin_courses.py:176 handlers/users/admin_courses.py:204
-msgid "Bot has some problems."
+#: handlers/users/admin_courses.py:168 handlers/users/advantage.py:197
+msgid ""
+"Kurs o'chirildi. ✅\n"
+"Kurslar menyusi, kerakli kursni tanlang."
 msgstr ""
+"Course deleted. ✅\n"
+"Courses menu, select the desired course."
 
-#: handlers/users/admin_courses.py:242
-msgid "Hozirda faol kurslar mavjud emas."
+#: handlers/users/admin_courses.py:205 handlers/users/admin_courses.py:259
+msgid "Bunday nomdagi kurs mavjud emas !"
+msgstr "The course with this name does not exist!"
+
+#: handlers/users/admin_courses.py:222
+msgid "Hozirda kurslar mavjud emas."
 msgstr "Data is not exist."
 
-#: handlers/users/admin_courses.py:303
+#: handlers/users/admin_courses.py:231
 msgid "Siz bu kursga ro'yxatdan o'tgansiz. ✅"
 msgstr "You are already registered.  ✅"
 
-#: handlers/users/admin_courses.py:312
+#: handlers/users/admin_courses.py:240
 msgid ""
 "Siz muvofaqqiyatli ro'yxatdan o'tdingiz. ✅\n"
 "Tez orada siz bilan bog'lanamiz. 😊"
@@ -163,7 +176,6 @@ msgstr ""
 "We will contact you soon. 😊"
 
 #: handlers/users/admin_statistics.py:20
-#, fuzzy
 msgid ""
 "Iltimos, telefon raqamni kiriting.\n"
 "Namuna: +998999999999"
@@ -171,12 +183,47 @@ msgstr "Please, enter your phone number."
 
 #: handlers/users/admin_statistics.py:39
 msgid "Foydalanuvchi topilmadi."
-msgstr ""
+msgstr "User not found."
 
 #: handlers/users/admin_statistics.py:59
-#, fuzzy
 msgid "Bekor qilindi. ✅"
 msgstr "Post is canceled."
+
+#: handlers/users/advantage.py:23
+msgid "Afzalliklar menyusi, kerakli tugmani tanlang."
+msgstr "Advantages menu, select the desired button."
+
+#: handlers/users/advantage.py:32
+msgid "Iltimos, o'zbek tili uchun afzallik nomini kiriting."
+msgstr "Please, enter advantage name for uzbek language."
+
+#: handlers/users/advantage.py:43
+msgid "Iltimos, rus tili uchun afzallik nomini kiriting."
+msgstr "Please, enter advantage name for russian language."
+
+#: handlers/users/advantage.py:54
+msgid "Iltimos, ingliz tili uchun afzallik nomini kiriting."
+msgstr "Please, enter advantage name for english language."
+
+#: handlers/users/advantage.py:65
+msgid "Iltimos, o'zbek tili uchun rasm yoki video kiriting."
+msgstr "Please, enter image or video for uzbek language."
+
+#: handlers/users/advantage.py:76 handlers/users/advantage.py:87
+msgid "Iltimos, rus tili uchun rasm yoki video kiriting."
+msgstr "Please, enter image or video for russian language."
+
+#: handlers/users/advantage.py:98 handlers/users/advantage.py:109
+msgid "Iltimos, ingliz tili uchun rasm yoki video kiriting."
+msgstr "Please, enter image or video for english language."
+
+#: handlers/users/advantage.py:220 handlers/users/advantage.py:254
+msgid "Bunday nomdagi afzallik mavjud emas !"
+msgstr "There is no advantage with this name!"
+
+#: handlers/users/advantage.py:235
+msgid "Afzalliklar menyusi, bizning ustun taraflarimiz bilan tanishing."
+msgstr "Advantages menu, learn more about our advantages."
 
 #: handlers/users/bot_settings.py:14 handlers/users/bot_settings.py:53
 msgid "Iltimos, o'zingizga qulay tilni tanlang 😊"
@@ -281,7 +328,7 @@ msgstr "Post is sending to all users..."
 msgid "Habar barcha foydalanuvchilarga jo'natildi."
 msgstr "Post is sent successfully."
 
-#: handlers/users/send_post.py:313 handlers/users/start.py:147
+#: handlers/users/send_post.py:313 handlers/users/start.py:148
 msgid "Botda nosozlik yuz berdi."
 msgstr "Bot has some problem."
 
@@ -301,32 +348,31 @@ msgstr "Welcome to bot service."
 msgid "Assalomu alaykum, videoni ko'ring va ajoyib ma'lumotlarga ega bo'ling 😃"
 msgstr "Assalomu alaykum, watch the video and get great information 😃"
 
-#: handlers/users/start.py:81
+#: handlers/users/start.py:82
 msgid "Albatta siz uchun foydali bo'ladi. 🤩"
 msgstr "It will definitely be useful for you. 🤩"
 
-#: handlers/users/start.py:90
+#: handlers/users/start.py:91
 msgid "Video orqali ko'plab foydali ma'lumotlarga ega bo'ling. 😍"
 msgstr "Get a lot of useful information through video. 😍"
 
-#: handlers/users/start.py:98
+#: handlers/users/start.py:99
 msgid "Iltimos, ism va familiyangizni kiriting."
 msgstr "Please, enter your full name."
 
-#: handlers/users/start.py:110
+#: handlers/users/start.py:111
 msgid "Iltimos, Telefon raqamingizni kiriting."
 msgstr "Please, enter your phone number."
 
-#: handlers/users/start.py:118
+#: handlers/users/start.py:119
 msgid "Iltimos tugmadan foydalaning."
 msgstr "Please, use button below."
 
-#: handlers/users/start.py:129
+#: handlers/users/start.py:130
 msgid "Iltimos, doimiy yashash manzilingizni tanlang."
 msgstr "Please, select location that you live."
 
-#: handlers/users/start.py:145
-#, fuzzy
+#: handlers/users/start.py:146
 msgid "Siz muvafaqqiyatli ro'yxatdan o'tdingiz. ✅"
 msgstr "You are successfully registered."
 
@@ -364,103 +410,93 @@ msgstr "Please, enter text for english language."
 msgid "Ustoz muvofaqqiyatli qo'shildi. ✅"
 msgstr "Data added successfully. ✅"
 
-#: keyboards/default/admins.py:10 keyboards/default/users.py:10
-msgid "Kurslar 🎯"
-msgstr "Courses 🎯"
-
-#: keyboards/default/admins.py:11 keyboards/default/users.py:11
-msgid "O'qituvchilar 👨‍🏫"
-msgstr "Teachers 👨‍🏫"
-
-#: keyboards/default/admins.py:14 keyboards/default/users.py:14
-msgid "Natijalar 🎖"
-msgstr "Results 🎖"
-
-#: keyboards/default/admins.py:15 keyboards/default/users.py:15
-msgid "Afzalliklar ⭐"
-msgstr "Advantages ⭐"
-
-#: keyboards/default/admins.py:18 keyboards/default/users.py:18
-msgid "Aloqa ☎"
-msgstr "Contact ☎"
-
-#: keyboards/default/admins.py:19 keyboards/default/users.py:19
-msgid "Ma'lumot ℹ"
-msgstr "Information ℹ"
-
-#: keyboards/default/admins.py:22
-msgid "Statistika 📈"
-msgstr "Statistics 📈"
-
-#: keyboards/default/admins.py:23
-msgid "Post Jo'natish ⏫"
-msgstr "Send Post ⏫"
-
-#: keyboards/default/admins.py:26 keyboards/default/users.py:22
-msgid "Tilni sozlash ⚙"
-msgstr "Change language ⚙"
-
-#: keyboards/default/admins.py:37 keyboards/default/users.py:33
-msgid "Asosiy menyu ◀"
-msgstr "Main menu ◀"
-
-#: keyboards/default/admins.py:48
-msgid "Ortga ◀"
-msgstr "Back ◀"
-
-#: keyboards/default/admins.py:59
-msgid "Telefon raqamni jo'natish 📞"
-msgstr "Tap to share number 📞"
-
-#: keyboards/inline/admin_course.py:21 keyboards/inline/admins.py:123
-#: keyboards/inline/admins.py:179 keyboards/inline/admins.py:224
-#: keyboards/inline/admins.py:260 keyboards/inline/admins.py:296
-msgid "Ruscha 🇷🇺"
-msgstr ""
-
-#: keyboards/inline/admin_course.py:24 keyboards/inline/admins.py:126
-#: keyboards/inline/admins.py:182 keyboards/inline/admins.py:226
-#: keyboards/inline/admins.py:262 keyboards/inline/admins.py:298
-msgid "English 🇺🇸"
-msgstr ""
-
-#: keyboards/inline/admin_course.py:27 keyboards/inline/admins.py:129
-#: keyboards/inline/admins.py:185 keyboards/inline/admins.py:228
-#: keyboards/inline/admins.py:264 keyboards/inline/admins.py:300
-msgid "O'zbek 🇺🇿"
-msgstr ""
-
-#: keyboards/inline/admin_course.py:32
-msgid "Yangu kurs ➕"
-msgstr "New course ➕"
-
-#: keyboards/inline/admin_course.py:33 keyboards/inline/admins.py:135
-#: keyboards/inline/admins.py:191 keyboards/inline/admins.py:219
-#: keyboards/inline/admins.py:255 keyboards/inline/admins.py:291
-msgid "O'chirish 🗑"
-msgstr "Deleted 🗑"
-
-#: keyboards/inline/admin_course.py:38
-msgid "Ro'yxatdan o'tganlar 👤"
-msgstr "Registered users 👤"
-
-#: keyboards/inline/admin_course.py:43 keyboards/inline/admin_course.py:79
-#: keyboards/inline/admins.py:140 keyboards/inline/admins.py:196
-#: keyboards/inline/users.py:16 keyboards/inline/users.py:38
-msgid "⬅ Ortga"
-msgstr "⬅ Back"
-
-#: keyboards/inline/admin_course.py:49 keyboards/inline/admin_course.py:85
-#: keyboards/inline/admins.py:146 keyboards/inline/admins.py:202
-#: keyboards/inline/users.py:22 keyboards/inline/users.py:44
-msgid "Keyingi ➡"
-msgstr "Next ➡"
-
-#: keyboards/inline/admin_course.py:62
+#: keyboards/default/admins.py:15
 msgid "Yangi kurs ➕"
 msgstr "New course ➕"
 
-#: keyboards/inline/admin_course.py:90
+#: keyboards/default/admins.py:16 keyboards/default/admins.py:29
+#: keyboards/default/admins.py:64 keyboards/default/users.py:34
+#: keyboards/default/users.py:49 keyboards/default/users.py:61
+msgid "Asosiy menyu ◀"
+msgstr "Main menu ◀"
+
+#: keyboards/default/admins.py:28
+msgid "Afzallik qo'shish ➕"
+msgstr "Add advantage ➕"
+
+#: keyboards/default/admins.py:37 keyboards/default/users.py:11
+msgid "Biz haqimizda ℹ"
+msgstr "About us ℹ"
+
+#: keyboards/default/admins.py:38 keyboards/default/users.py:12
+msgid "O'qituvchilar 👨‍🏫"
+msgstr "Teachers 👨‍🏫"
+
+#: keyboards/default/admins.py:41 keyboards/default/users.py:15
+msgid "Kurslar 🎯"
+msgstr "Courses 🎯"
+
+#: keyboards/default/admins.py:42 keyboards/default/users.py:16
+msgid "Afzalliklar ⭐"
+msgstr "Advantages ⭐"
+
+#: keyboards/default/admins.py:45 keyboards/default/users.py:19
+msgid "Natijalar 🎖"
+msgstr "Results 🎖"
+
+#: keyboards/default/admins.py:46 keyboards/default/users.py:20
+msgid "Aloqa ☎"
+msgstr "Contact ☎"
+
+#: keyboards/default/admins.py:49
+msgid "Statistika 📈"
+msgstr "Statistics 📈"
+
+#: keyboards/default/admins.py:50
+msgid "Post Jo'natish ⏫"
+msgstr "Send Post ⏫"
+
+#: keyboards/default/admins.py:53 keyboards/default/users.py:23
+msgid "Tilni sozlash ⚙"
+msgstr "Change language ⚙"
+
+#: keyboards/default/admins.py:75
+msgid "Ortga ◀"
+msgstr "Back ◀"
+
+#: keyboards/default/admins.py:86
+msgid "Telefon raqamni jo'natish 📞"
+msgstr "Tap to share number 📞"
+
+#: keyboards/inline/admin_course.py:15 keyboards/inline/admins.py:123
+#: keyboards/inline/admins.py:180 keyboards/inline/admins.py:225
+#: keyboards/inline/admins.py:261 keyboards/inline/admins.py:292
+msgid "Ruscha 🇷🇺"
+msgstr ""
+
+#: keyboards/inline/admin_course.py:18 keyboards/inline/admins.py:126
+#: keyboards/inline/admins.py:183 keyboards/inline/admins.py:227
+#: keyboards/inline/admins.py:263 keyboards/inline/admins.py:294
+msgid "English 🇺🇸"
+msgstr ""
+
+#: keyboards/inline/admin_course.py:21 keyboards/inline/admins.py:129
+#: keyboards/inline/admins.py:186 keyboards/inline/admins.py:229
+#: keyboards/inline/admins.py:265 keyboards/inline/admins.py:296
+msgid "O'zbek 🇺🇿"
+msgstr ""
+
+#: keyboards/inline/admin_course.py:26 keyboards/inline/admins.py:135
+#: keyboards/inline/admins.py:192 keyboards/inline/admins.py:220
+#: keyboards/inline/admins.py:256 keyboards/inline/admins.py:300
+msgid "O'chirish 🗑"
+msgstr "Delete 🗑"
+
+#: keyboards/inline/admin_course.py:31
+msgid "Registered users"
+msgstr ""
+
+#: keyboards/inline/admin_course.py:48
 msgid "Ro'yxatdan o'tish ➕"
 msgstr "Register ➕"
 
@@ -499,66 +535,74 @@ msgid "Yangi ustoz ➕"
 msgstr "New teacher ➕"
 
 #: keyboards/inline/admins.py:134
-#, fuzzy
 msgid "Yangi o'qituvchi ➕"
 msgstr "New teacher ➕"
 
-#: keyboards/inline/admins.py:159 keyboards/inline/admins.py:190
+#: keyboards/inline/admins.py:140 keyboards/inline/admins.py:197
+#: keyboards/inline/users.py:16 keyboards/inline/users.py:38
+msgid "⬅ Ortga"
+msgstr "⬅ Back"
+
+#: keyboards/inline/admins.py:146 keyboards/inline/admins.py:203
+#: keyboards/inline/users.py:22 keyboards/inline/users.py:44
+msgid "Keyingi ➡"
+msgstr "Next ➡"
+
+#: keyboards/inline/admins.py:159 keyboards/inline/admins.py:191
 msgid "Yangi natija ➕"
 msgstr "New result ➕"
 
-#: keyboards/inline/admins.py:240 keyboards/inline/admins.py:276
-#: keyboards/inline/admins.py:312
+#: keyboards/inline/admins.py:241 keyboards/inline/admins.py:277
 msgid "Ma'lumot qo'shish ➕"
 msgstr "Add data ➕"
 
-#: keyboards/inline/admins.py:323
+#: keyboards/inline/admins.py:313
 msgid "Excel olish (ro'yxatdan o'tganlar)"
 msgstr "Export excel ( registered users )"
 
-#: keyboards/inline/admins.py:324
+#: keyboards/inline/admins.py:314
 msgid "Delete user by phone"
 msgstr ""
 
-#: keyboards/inline/admins.py:335
+#: keyboards/inline/admins.py:325
 msgid "Delete 🗑"
 msgstr ""
 
-#: keyboards/inline/admins.py:336
+#: keyboards/inline/admins.py:326
 msgid "Cancel ❌"
 msgstr ""
 
 #: keyboards/inline/locations.py:10
 msgid "Andijon"
-msgstr ""
+msgstr "Andijan"
 
 #: keyboards/inline/locations.py:11
 msgid "Buxoro"
-msgstr ""
+msgstr "Bukhara"
 
 #: keyboards/inline/locations.py:14
 msgid "Farg'ona"
-msgstr ""
+msgstr "Fergana"
 
 #: keyboards/inline/locations.py:15
 msgid "Jizzax"
-msgstr ""
+msgstr "Jizzakh"
 
 #: keyboards/inline/locations.py:18
 msgid "Xorazm"
-msgstr ""
+msgstr "Khorezm"
 
 #: keyboards/inline/locations.py:19
 msgid "Namangan"
-msgstr ""
+msgstr "Namangan"
 
 #: keyboards/inline/locations.py:22
 msgid "Navoiy"
-msgstr ""
+msgstr "Navoi"
 
 #: keyboards/inline/locations.py:23
 msgid "Qashqadaryo"
-msgstr ""
+msgstr "Kashkadarya"
 
 #: keyboards/inline/locations.py:26
 msgid "Samanrqand"
@@ -566,25 +610,30 @@ msgstr ""
 
 #: keyboards/inline/locations.py:27
 msgid "Sirdaryo"
-msgstr ""
+msgstr "Syrdarya"
 
 #: keyboards/inline/locations.py:30
 msgid "Surxondaryo"
-msgstr ""
+msgstr "Surkhandarya"
 
 #: keyboards/inline/locations.py:31
 msgid "Toshkent V"
-msgstr ""
+msgstr "Tashkent dis"
 
 #: keyboards/inline/locations.py:34
 msgid "Toshkent shahri"
-msgstr ""
+msgstr "Tashkent city"
 
 #: keyboards/inline/locations.py:37
 msgid "Qoraqalpog'iston Respublikasi"
-msgstr ""
+msgstr "Republic of Karakalpakstan"
 
-#: keyboards/inline/users.py:56 keyboards/inline/users.py:63
+#: keyboards/inline/users.py:57 keyboards/inline/users.py:68
 msgid "Keyingi video ➡"
 msgstr "Next video ➡"
+
+#: keyboards/inline/users.py:80
+msgid "Ro'yxatdan o'tish 😊 "
+msgstr "Register ➕"
+
 

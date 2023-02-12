@@ -1,3 +1,5 @@
+from sqlalchemy import or_
+
 from main.databases import database
 from main.models import *
 
@@ -198,6 +200,41 @@ async def get_course(course_id):
         return False
 
 
+async def get_advantage(advantage_id):
+    try:
+        query = advantage.select().where(advantage.c.status == AdvantageStatus.active, courses.c.id == advantage_id)
+        return await database.fetch_one(query=query)
+    except Exception as exc:
+        print(exc)
+        return False
+
+
+async def get_course_by_button(button):
+    try:
+        query = courses.select().where(courses.c.status == CourseStatus.active,
+                                       or_(courses.c.button_uz == button,
+                                           courses.c.button_ru == button,
+                                           courses.c.button_en == button)
+                                       )
+        return await database.fetch_one(query=query)
+    except Exception as exc:
+        print(exc)
+        return False
+
+
+async def get_advantage_by_button(button):
+    try:
+        query = advantage.select().where(advantage.c.status == AdvantageStatus.active,
+                                         or_(advantage.c.button_uz == button,
+                                             advantage.c.button_ru == button,
+                                             advantage.c.button_en == button)
+                                         )
+        return await database.fetch_one(query=query)
+    except Exception as exc:
+        print(exc)
+        return False
+
+
 async def delete_course(course_id):
     try:
         query = courses.delete().where(courses.c.id == course_id)
@@ -247,6 +284,9 @@ async def add_course(message, state):
     try:
         data = await state.get_data()
         query = courses.insert().values(
+            button_uz=data.get("button_uz"),
+            button_ru=data.get("button_ru"),
+            button_en=data.get("button_en"),
             image_uz=data.get("image_uz"),
             image_ru=data.get("image_ru"),
             image_en=data.get("image_en"),
@@ -444,10 +484,10 @@ async def add_about(message, state):
         return False
 
 
-async def get_advantage():
+async def get_advantages():
     try:
         query = advantage.select().where(advantage.c.status == AdvantageStatus.active)
-        return await database.fetch_one(query=query)
+        return await database.fetch_all(query=query)
     except Exception as exc:
         print(exc)
         return False
@@ -467,6 +507,9 @@ async def add_advantage(message, state):
     try:
         data = await state.get_data()
         query = advantage.insert().values(
+            button_uz=data.get("button_uz"),
+            button_ru=data.get("button_ru"),
+            button_en=data.get("button_en"),
             image_uz=data.get("image_uz"),
             image_ru=data.get("image_ru"),
             image_en=data.get("image_en"),

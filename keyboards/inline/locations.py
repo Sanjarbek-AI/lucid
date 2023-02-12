@@ -23,7 +23,7 @@ async def locations_def():
                 InlineKeyboardButton(text=_("Qashqadaryo"), callback_data="Qashqadaryo")
             ],
             [
-                InlineKeyboardButton(text=_("Samanrqand"), callback_data="Samarqand"),
+                InlineKeyboardButton(text=_("Samarqand"), callback_data="Samarqand"),
                 InlineKeyboardButton(text=_("Sirdaryo"), callback_data="Sirdaryo")
             ],
             [

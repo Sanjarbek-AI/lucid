@@ -51,6 +51,9 @@ class UpdateContact(StatesGroup):
 
 
 class AddCourse(StatesGroup):
+    button_uz = State()
+    button_ru = State()
+    button_en = State()
     image_uz = State()
     image_ru = State()
     image_en = State()
@@ -87,9 +90,19 @@ class AddInformation(StatesGroup):
 
 
 class AddAdvantage(StatesGroup):
+    button_uz = State()
+    button_ru = State()
+    button_en = State()
     image_uz = State()
     image_ru = State()
     image_en = State()
     info_uz = State()
     info_en = State()
     info_ru = State()
+
+
+class Menu(StatesGroup):
+    course = State()
+    course_in = State()
+    advantage = State()
+    advantage_in = State()
