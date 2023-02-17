@@ -202,7 +202,8 @@ async def get_course(course_id):
 
 async def get_advantage(advantage_id):
     try:
-        query = advantage.select().where(advantage.c.status == AdvantageStatus.active, courses.c.id == advantage_id)
+        query = advantage.select().where(advantage.c.status == AdvantageStatus.active,
+                                         advantage.c.id == int(advantage_id))
         return await database.fetch_one(query=query)
     except Exception as exc:
         print(exc)

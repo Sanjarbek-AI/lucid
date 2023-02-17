@@ -1,7 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 from loader import _
-from utils.db_api.commands import get_courses
+from utils.db_api.commands import get_courses, get_advantages
 
 
 async def users_main_menu():
@@ -51,7 +51,7 @@ async def user_course_def_new(lang):
 
 
 async def user_advantage_def_new(lang):
-    advantages = await get_courses()
+    advantages = await get_advantages()
 
     advantage_keyboard = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
     if advantages:

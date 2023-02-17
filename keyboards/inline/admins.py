@@ -281,7 +281,7 @@ async def add_information_def():
     return add_information
 
 
-admin_advantage_filter = CallbackData("admin_advantage", "act", "lang")
+admin_advantage_filter = CallbackData("admin_advantage", "act", "lang", "advantage_id")
 advantage_delete = CallbackData("delete_advantage", "act", "lang", "advantage_id")
 
 
@@ -290,11 +290,14 @@ async def advantage_admin_def(lang, advantage_id):
         inline_keyboard=[
             [
                 InlineKeyboardButton(text=_("Ruscha 🇷🇺"),
-                                     callback_data=admin_advantage_filter.new(act="admin_advantage", lang="ru")),
+                                     callback_data=admin_advantage_filter.new(act="admin_advantage", lang="ru",
+                                                                              advantage_id=advantage_id)),
                 InlineKeyboardButton(text=_("English 🇺🇸"),
-                                     callback_data=admin_advantage_filter.new(act="admin_advantage", lang="en")),
+                                     callback_data=admin_advantage_filter.new(act="admin_advantage", lang="en",
+                                                                              advantage_id=advantage_id)),
                 InlineKeyboardButton(text=_("O'zbek 🇺🇿"),
-                                     callback_data=admin_advantage_filter.new(act="admin_advantage", lang="uz"))
+                                     callback_data=admin_advantage_filter.new(act="admin_advantage", lang="uz",
+                                                                              advantage_id=advantage_id))
             ],
             [
                 InlineKeyboardButton(text=_("O'chirish 🗑"),
